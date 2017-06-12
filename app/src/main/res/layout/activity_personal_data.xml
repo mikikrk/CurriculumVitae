@@ -6,6 +6,8 @@
     <RelativeLayout
         android:layout_height="match_parent"
         android:layout_width="match_parent"
+        android:clipToPadding="false"
+        android:paddingBottom="2dp"
         >
 
         <LinearLayout
@@ -14,7 +16,8 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:orientation="vertical"
-            android:padding="@dimen/personal_data_padding">
+            android:padding="@dimen/personal_data_padding"
+            >
 
             <TextView
                 android:id="@+id/tvName"
@@ -98,6 +101,7 @@
             android:layout_alignParentTop="true"
             android:layout_above="@id/llDataContainer"
             android:scaleType="centerCrop"
+            android:elevation="2dp"
             app:imageUrl="@{viewModel.photoUri}"
             />
 
