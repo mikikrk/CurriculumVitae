@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">CirriculumVitae</string>
     <string name="action_settings">Settings</string>
+    <string name="android_developers">Android Dvelopers</string>
+    <string name="title_activity_more_info">MoreInfoActivity</string>
+    <string name="more_info_title_experience">Experience</string>
+    <string name="more_info_title_studies">Activities during a studies</string>
+    <string name="more_info_title_skills"><![CDATA[Skills & interests]]></string>
+
 </resources>
