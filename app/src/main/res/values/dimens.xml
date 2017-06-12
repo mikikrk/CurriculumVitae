@@ -9,7 +9,14 @@
     <dimen name="fields_gap">8dp</dimen>
 
     <dimen name="iconed_text_view_height">24sp</dimen>
-    <dimen name="iconed_text_view_gap">48dp</dimen>
+    <dimen name="iconed_text_view_gap">16dp</dimen>
     <dimen name="iconed_image_view_width">24dp</dimen>
 
+    <dimen name="floating_button_size">64dp</dimen>
+    <dimen name="rounded_image_size">64dp</dimen>
+    <dimen name="more_info_floating_button_margin_aligning_more_ic_to_the_middle">-28dp</dimen>
+
+    <dimen name="activity_margin">16dp</dimen>
+    <dimen name="more_info_content_gap">16dp</dimen>
+    <dimen name="chronology_left_margin">16dp</dimen>
 </resources>

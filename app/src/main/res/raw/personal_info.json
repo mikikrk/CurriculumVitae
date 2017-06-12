@@ -4,5 +4,39 @@
   "birthDate": "20.05.1992",
   "phone": "790 379 512",
   "email": "mn.mikolaj.nowak@gmail.com",
-  "location": "Krakow"
+  "location": "Krakow",
+  "photoUri": "file:///android_asset/mikolaj_nowak.png",
+
+  "experience": {
+    "companies": [
+      {
+        "name": "ColorTv",
+        "employmentTime": "01.2016 - 06.2017",
+        "position": "Android Developer",
+        "description": "Developing content recommendation and adveriting sdk for AndroidTv, FireTv, Android and Chromecast platforms.",
+        "iconUri": "file:///android_asset/ic_android.jpg"
+      },
+      {
+        "name": "Comarch",
+        "employmentTime": "07.2014 - 06.2015",
+        "position": "Junior Java Developer",
+        "description": "Developing B2B system with usage of Spring, Blueprint JDBC, SOAP, Camel and Oracle databases.",
+        "iconUri": "file:///android_asset/ic_java.jpg"
+      },
+      {
+        "name": "City tour company",
+        "employmentTime": "holidays 2011 - 2013",
+        "position": "Guide as a Melex driver",
+        "description": "Developing content recommendation and adveriting sdk for AndroidTv, FireTv, Android and Chromecast platforms.",
+        "iconUri": "file:///android_asset/ic_melex.jpg"
+      },
+      {
+        "name": "Strzelnica Kraków",
+        "employmentTime": "2014 - 2017",
+        "position": "Shooting instructor",
+        "description": "Occasionally providing shooting training for big and english speaking groups",
+        "iconUri": "file:///android_asset/ic_shooting.jpg"
+      }
+    ]
+  }
 }

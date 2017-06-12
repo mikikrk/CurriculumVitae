@@ -4,7 +4,7 @@
     <color name="colorAccent">#4990E2</color>
     <color name="colorPrimaryDark">#3F51B5</color>
 
-    <color name="colorTextPrimary">#787878</color>
-    <color name="colorTextSecondary">#a8a8a8</color>
-    <color name="colorTextRedundant">#878787</color>
+    <color name="colorTextPrimary">#646464</color>
+    <color name="colorTextSecondary">#7F7F7F</color>
+    <color name="colorTextRedundant">#A2A2A2</color>
 </resources>

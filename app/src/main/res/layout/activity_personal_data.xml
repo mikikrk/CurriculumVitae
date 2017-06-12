@@ -1,7 +1,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <data>
-        <variable name="viewModel" type="com.example.mnowak.cirriculumvitae.models.PersonalInfo" />
+        <variable name="viewModel" type="com.example.mnowak.cirriculumvitae.models.PersonalInfoViewModel" />
     </data>
     <RelativeLayout
         android:layout_height="match_parent"
@@ -29,61 +29,65 @@
                 android:id="@+id/tvPosition"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/colorTextPrimary"
+                android:textColor="@color/colorTextRedundant"
                 android:textSize="@dimen/subheader_text_size"
                 android:text="@{viewModel.position}"
                 />
 
-            <com.example.mnowak.cirriculumvitae.ui.widgets.IconedTextView
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/iconed_text_view_height"
                 android:textSize="@dimen/regular_text_size"
                 android:textColor="@color/colorTextSecondary"
                 android:layout_margin="@dimen/fields_gap"
                 android:text="@{viewModel.birthDate}"
-                android:src="@drawable/ic_birtday_blue"/>
+                android:drawableStart="@drawable/ic_birtday_blue"
+                android:drawablePadding="@dimen/iconed_text_view_gap"/>
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
                 android:background="@drawable/divider_line"/>
 
-            <com.example.mnowak.cirriculumvitae.ui.widgets.IconedTextView
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/iconed_text_view_height"
                 android:textSize="@dimen/regular_text_size"
                 android:textColor="@color/colorTextSecondary"
                 android:layout_margin="@dimen/fields_gap"
                 android:text="@{viewModel.phone}"
-                android:src="@drawable/ic_phone_blue"/>
+                android:drawableStart="@drawable/ic_phone_blue"
+                android:drawablePadding="@dimen/iconed_text_view_gap"/>
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
                 android:background="@drawable/divider_line"/>
 
-            <com.example.mnowak.cirriculumvitae.ui.widgets.IconedTextView
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/iconed_text_view_height"
                 android:textSize="@dimen/regular_text_size"
                 android:textColor="@color/colorTextSecondary"
                 android:layout_margin="@dimen/fields_gap"
                 android:text="@{viewModel.email}"
-                android:src="@drawable/ic_mail_blue"/>
+                android:drawableStart="@drawable/ic_mail_blue"
+                android:drawablePadding="@dimen/iconed_text_view_gap"/>
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
                 android:background="@drawable/divider_line"/>
 
-            <com.example.mnowak.cirriculumvitae.ui.widgets.IconedTextView
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/iconed_text_view_height"
                 android:textSize="@dimen/regular_text_size"
                 android:textColor="@color/colorTextSecondary"
                 android:layout_margin="@dimen/fields_gap"
                 android:text="@{viewModel.location}"
-                android:src="@drawable/ic_location_blue"/>
+                android:drawableStart="@drawable/ic_location_blue"
+                android:drawablePadding="@dimen/iconed_text_view_gap"/>
 
         </LinearLayout>
 
@@ -94,15 +98,14 @@
             android:layout_alignParentTop="true"
             android:layout_above="@id/llDataContainer"
             android:scaleType="centerCrop"
-            android:src="@drawable/mikolaj_nowak"
-            android:background="@android:color/holo_red_dark"
+            app:imageUrl="@{viewModel.photoUri}"
             />
 
         <android.support.design.widget.FloatingActionButton
             android:id="@+id/fabMoreInfo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="-28dp"
+            android:layout_width="@dimen/floating_button_size"
+            android:layout_height="@dimen/floating_button_size"
+            android:layout_marginTop="@dimen/more_info_floating_button_margin_aligning_more_ic_to_the_middle"
             android:layout_marginEnd="@dimen/fab_margin"
             android:layout_alignTop="@id/llDataContainer"
             android:layout_alignParentEnd="true"
