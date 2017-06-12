@@ -14,28 +14,28 @@
         "employmentTime": "01.2016 - 06.2017",
         "position": "Android Developer",
         "description": "Developing content recommendation and adveriting sdk for AndroidTv, FireTv, Android and Chromecast platforms.",
-        "iconUri": "file:///android_asset/ic_android.jpg"
+        "iconUri": "file:///android_asset/ic_android.png"
       },
       {
         "name": "Comarch",
         "employmentTime": "07.2014 - 06.2015",
         "position": "Junior Java Developer",
         "description": "Developing B2B system with usage of Spring, Blueprint JDBC, SOAP, Camel and Oracle databases.",
-        "iconUri": "file:///android_asset/ic_java.jpg"
+        "iconUri": "file:///android_asset/ic_java.png"
       },
       {
         "name": "City tour company",
         "employmentTime": "holidays 2011 - 2013",
         "position": "Guide as a Melex driver",
         "description": "Developing content recommendation and adveriting sdk for AndroidTv, FireTv, Android and Chromecast platforms.",
-        "iconUri": "file:///android_asset/ic_melex.jpg"
+        "iconUri": "file:///android_asset/ic_melex.png"
       },
       {
         "name": "Strzelnica Kraków",
         "employmentTime": "2014 - 2017",
         "position": "Shooting instructor",
         "description": "Occasionally providing shooting training for big and english speaking groups",
-        "iconUri": "file:///android_asset/ic_shooting.jpg"
+        "iconUri": "file:///android_asset/ic_shooting.png"
       }
     ]
   }

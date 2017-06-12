@@ -6,6 +6,10 @@
     <dimen name="subheader_text_size">14sp</dimen>
     <dimen name="regular_text_size">18sp</dimen>
 
+    <dimen name="more_info_header_text_size">18sp</dimen>
+    <dimen name="more_info_redundant_header_text_size">10sp</dimen>
+    <dimen name="more_info_regular_text_size">12sp</dimen>
+
     <dimen name="fields_gap">8dp</dimen>
 
     <dimen name="iconed_text_view_height">24sp</dimen>
@@ -18,5 +22,16 @@
 
     <dimen name="activity_margin">16dp</dimen>
     <dimen name="more_info_content_gap">16dp</dimen>
+
+    <dimen name="narrow_line_width">1dp</dimen>
     <dimen name="chronology_left_margin">16dp</dimen>
+    <dimen name="chronology_element_width">7dp</dimen>
+    <dimen name="chronology_arrow_height">10dp</dimen>
+    <dimen name="chronology_marker_top_margin">32dp</dimen>
+    <dimen name="company_to_marker_triangle_pointer_size">32dp</dimen>
+
+    <dimen name="data_box_padding">14dp</dimen>
+    <dimen name="position_icon_size">27dp</dimen>
+    <dimen name="company_position_margin">4dp</dimen>
+    <dimen name="marker_to_triangle_gap">16dp</dimen>
 </resources>

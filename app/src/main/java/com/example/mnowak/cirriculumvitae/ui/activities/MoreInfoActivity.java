@@ -12,6 +12,7 @@ import com.example.mnowak.cirriculumvitae.R;
 import com.example.mnowak.cirriculumvitae.databinding.ActivityMoreInfoBinding;
 import com.example.mnowak.cirriculumvitae.models.PersonalInfoViewModel;
 import com.example.mnowak.cirriculumvitae.ui.adapters.MoreInfoPagerAdapter;
+import com.example.mnowak.cirriculumvitae.ui.fragments.ExperienceFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -78,6 +79,7 @@ public class MoreInfoActivity extends AppCompatActivity {
 
     public List<Fragment> getUsedPages() {
         List<Fragment> screens = new ArrayList<>();
+        screens.add(ExperienceFragment.newInstance(personalInfoViewModel.experience));
         return screens;
     }
 }

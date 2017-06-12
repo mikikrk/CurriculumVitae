@@ -9,4 +9,6 @@ public class PersonalInfoViewModel extends PicturedViewModel {
     public String email;
     public String location;
     public String photoUri;
+
+    public ExperienceViewModel experience;
 }
