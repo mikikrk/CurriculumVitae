@@ -13,6 +13,7 @@ import com.example.mnowak.cirriculumvitae.databinding.ActivityMoreInfoBinding;
 import com.example.mnowak.cirriculumvitae.models.PersonalInfoViewModel;
 import com.example.mnowak.cirriculumvitae.ui.adapters.MoreInfoPagerAdapter;
 import com.example.mnowak.cirriculumvitae.ui.fragments.ExperienceFragment;
+import com.example.mnowak.cirriculumvitae.ui.fragments.StudiesActivitiesFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,7 +33,6 @@ public class MoreInfoActivity extends AppCompatActivity {
 
     @BindView(R.id.vpContent)
     ViewPager vpContent;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -70,16 +70,33 @@ public class MoreInfoActivity extends AppCompatActivity {
         }
     }
 
-
     private void prepareViewPager() {
         List<Fragment> screens = getUsedPages();
         MoreInfoPagerAdapter screenPagerAdapter = new MoreInfoPagerAdapter(getSupportFragmentManager(), screens);
         vpContent.setAdapter(screenPagerAdapter);
+        vpContent.addOnPageChangeListener(onPageChangeListener);
     }
+
+    private ViewPager.OnPageChangeListener onPageChangeListener = new ViewPager.OnPageChangeListener() {
+        @Override
+        public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+        }
+
+        @Override
+        public void onPageSelected(int position) {
+            setTitle(TITLES_IDS[position]);
+        }
+
+        @Override
+        public void onPageScrollStateChanged(int state) {
+
+        }
+    };
 
     public List<Fragment> getUsedPages() {
         List<Fragment> screens = new ArrayList<>();
         screens.add(ExperienceFragment.newInstance(personalInfoViewModel.experience));
+        screens.add(StudiesActivitiesFragment.newInstance(personalInfoViewModel.activities));
         return screens;
     }
 }

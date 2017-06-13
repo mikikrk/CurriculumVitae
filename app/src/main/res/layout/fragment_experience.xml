@@ -1,38 +1,29 @@
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
-    <data>
-        <variable
-            name="viewModel"
-            type="com.example.mnowak.cirriculumvitae.models.ExperienceViewModel" />
-    </data>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <FrameLayout
-        android:layout_width="match_parent"
+        android:id="@+id/flChronologyLine"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        >
+        android:layout_marginStart="@dimen/chronology_left_margin">
 
-        <FrameLayout
-            android:id="@+id/flChronologyLine"
-            android:layout_width="wrap_content"
+        <View
+            android:layout_width="@dimen/chronology_element_width"
+            android:layout_height="@dimen/chronology_arrow_height"
+            android:layout_gravity="top"
+            android:background="@drawable/triangle_top_blue" />
+
+        <View
+            android:layout_width="@dimen/narrow_line_width"
             android:layout_height="match_parent"
-            android:layout_marginStart="@dimen/chronology_left_margin"
-            >
-
-            <View android:layout_height="@dimen/chronology_arrow_height"
-                android:layout_width="@dimen/chronology_element_width"
-                android:layout_gravity="top"
-                android:background="@drawable/triangle_top_blue"/>
-
-            <View
-                android:layout_height="match_parent"
-                android:layout_width="@dimen/narrow_line_width"
-                android:layout_gravity="center_horizontal"
-                android:background="@color/colorPrimary"/>
-        </FrameLayout>
-
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/rvCompanies"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
+            android:layout_gravity="center_horizontal"
+            android:background="@color/colorPrimary" />
     </FrameLayout>
-</layout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvCompanies"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</FrameLayout>

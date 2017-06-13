@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="viewModel"
+            type="com.example.mnowak.cirriculumvitae.models.StudiesActivityViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/data_box_padding"
+        android:elevation="@dimen/data_box_elevation"
+        android:layout_marginTop="@dimen/data_box_elevation"
+        android:layout_marginStart="@dimen/data_box_elevation"
+        android:layout_marginEnd="@dimen/data_box_elevation"
+        android:layout_marginBottom="@dimen/more_info_content_gap"
+        android:background="@drawable/slightly_rounded_rectangle_white">
+
+        <ImageView
+            android:id="@+id/ivIcon"
+            android:layout_width="@dimen/data_box_icon_size"
+            android:layout_height="@dimen/data_box_icon_size"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="@dimen/data_box_padding"
+            app:imageUrl="@{viewModel.iconUri}"/>
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@id/ivIcon"
+            android:textSize="@dimen/more_info_header_text_size"
+            android:textColor="@color/colorTextPrimary"
+            android:text="@{viewModel.name}"
+            />
+
+        <TextView
+            android:id="@+id/tvDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvName"
+            android:layout_toEndOf="@id/ivIcon"
+            android:textSize="@dimen/more_info_redundant_header_text_size"
+            android:textColor="@color/colorTextRedundant"
+            android:text="@{viewModel.description}"
+            />
+
+        <LinearLayout
+            android:id="@+id/llImportantEvents"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvDescription"
+            android:layout_toEndOf="@id/ivIcon"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llRedundantEvents"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/llImportantEvents"
+            android:layout_toEndOf="@id/ivIcon"
+            android:orientation="vertical"
+            android:visibility="@{viewModel.expanded ? View.VISIBLE : View.GONE}">
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="@dimen/clickable_more_info_area"
+            android:layout_height="@dimen/clickable_more_info_area"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/disable_activity_margin"
+            android:layout_marginBottom="@dimen/disable_activity_margin"
+            android:background="@android:color/transparent"
+            android:onClick="@{() -> viewModel.toggleExpanded()}"/>
+
+        <ImageView
+            android:layout_width="@dimen/more_events_width"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@id/llRedundantEvents"
+            android:visibility="@{(viewModel.importantEvents == 0 || viewModel.importantEvents > viewModel.events.size() || viewModel.expanded) ? View.GONE : View.VISIBLE}"
+            android:src="@drawable/ic_expand_more_blue"/>
+
+        <ImageView
+            android:layout_width="@dimen/more_events_width"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@id/llRedundantEvents"
+            android:visibility="@{viewModel.expanded ? View.VISIBLE : View.GONE}"
+            android:src="@drawable/ic_expand_less_blue"/>
+
+    </RelativeLayout>
+</layout>

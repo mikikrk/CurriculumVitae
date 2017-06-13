@@ -1,5 +1,7 @@
 package com.example.mnowak.cirriculumvitae.models;
 
+import java.util.List;
+
 public class PersonalInfoViewModel extends PicturedViewModel {
 
     public String name;
@@ -10,5 +12,6 @@ public class PersonalInfoViewModel extends PicturedViewModel {
     public String location;
     public String photoUri;
 
-    public ExperienceViewModel experience;
+    public List<CompanyViewModel> experience;
+    public List<StudiesActivityViewModel> activities;
 }

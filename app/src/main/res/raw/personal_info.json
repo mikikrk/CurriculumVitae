@@ -6,37 +6,215 @@
   "email": "mn.mikolaj.nowak@gmail.com",
   "location": "Krakow",
   "photoUri": "file:///android_asset/mikolaj_nowak.png",
-
-  "experience": {
-    "companies": [
-      {
-        "name": "ColorTv",
-        "employmentTime": "01.2016 - 06.2017",
-        "position": "Android Developer",
-        "description": "Developing content recommendation and adveriting sdk for AndroidTv, FireTv, Android and Chromecast platforms.",
-        "iconUri": "file:///android_asset/ic_android.png"
-      },
-      {
-        "name": "Comarch",
-        "employmentTime": "07.2014 - 06.2015",
-        "position": "Junior Java Developer",
-        "description": "Developing B2B system with usage of Spring, Blueprint JDBC, SOAP, Camel and Oracle databases.",
-        "iconUri": "file:///android_asset/ic_java.png"
-      },
-      {
-        "name": "City tour company",
-        "employmentTime": "holidays 2011 - 2013",
-        "position": "Guide as a Melex driver",
-        "description": "Developing content recommendation and adveriting sdk for AndroidTv, FireTv, Android and Chromecast platforms.",
-        "iconUri": "file:///android_asset/ic_melex.png"
-      },
-      {
-        "name": "Strzelnica Kraków",
-        "employmentTime": "2014 - 2017",
-        "position": "Shooting instructor",
-        "description": "Occasionally providing shooting training for big and english speaking groups",
-        "iconUri": "file:///android_asset/ic_shooting.png"
-      }
-    ]
-  }
+  "experience": [
+    {
+      "name": "ColorTv",
+      "employmentTime": "01.2016 - 06.2017",
+      "position": "Android Developer",
+      "description": "Developing content recommendation and adveriting sdk for AndroidTv, FireTv, Android and Chromecast platforms.",
+      "iconUri": "file:///android_asset/ic_android.png"
+    },
+    {
+      "name": "Comarch",
+      "employmentTime": "07.2014 - 06.2015",
+      "position": "Junior Java Developer",
+      "description": "Developing B2B system with usage of Spring, Blueprint JDBC, SOAP, Camel and Oracle databases.",
+      "iconUri": "file:///android_asset/ic_java.png"
+    },
+    {
+      "name": "City tour company",
+      "employmentTime": "holidays 2011 - 2013",
+      "position": "Guide as a Melex driver",
+      "description": "Developing content recommendation and adveriting sdk for AndroidTv, FireTv, Android and Chromecast platforms.",
+      "iconUri": "file:///android_asset/ic_melex.png"
+    },
+    {
+      "name": "Strzelnica Kraków",
+      "employmentTime": "2014 - 2017",
+      "position": "Shooting instructor",
+      "description": "Occasionally providing shooting training for big and english speaking groups",
+      "iconUri": "file:///android_asset/ic_shooting.png"
+    }
+  ],
+  "activities": [
+    {
+      "name": "Computer science",
+      "description": "Electrical Engineering, Automatics, Computer Science and Biomedical Engineering",
+      "iconUri": "file:///android_asset/ic_agh_blue.png",
+      "events": [
+        {
+          "name": "Engineering degree"
+        },
+        {
+          "name": "Master degree"
+        }
+      ]
+    },
+    {
+      "name": "EESTEC AGH Kraków",
+      "description": "Electronic Engineering Students’ European association",
+      "iconUri": "file:///android_asset/ic_organization_blue.png",
+      "importantEvents": 4,
+      "events": [
+        {
+          "name": "Academical Projects Fair",
+          "description": "Fair on which students can expose their academical projects",
+          "function": "Head coordinator"
+        },
+        {
+          "name": "KrakYourNet",
+          "description": "Security workshops",
+          "function": "FR coordinator"
+        },
+        {
+          "name": "International FR team",
+          "function": "coordinator"
+        },
+        {
+          "name": "Soft Skills Academy",
+          "function": "organizer"
+        },
+        {
+          "name": "Smart energy for the better world",
+          "description": "International event organized with cooperation with ABB",
+          "function": "organizer"
+        },
+        {
+          "name": "Multiple international workshops and exchanges",
+          "function": "coordinator and organizer"
+        },
+        {
+          "name": "FR Annual Meeting in Nish",
+          "description": "Fundraising workshop",
+          "function": "attendant"
+        },
+        {
+          "name": ".COM in Stambul",
+          "description": "Web technologies wokrshop",
+          "function": "attendant"
+        },
+        {
+          "name": "Internal soft skills trainings",
+          "description": "Communication, presentation, motivation and activation, team building, team management, project management, time management, facilitation, feedback, knowledge about body language and business etiquette",
+          "function": "attendant"
+        }
+      ]
+    },
+    {
+      "name": "Academical Sailing Club AGH",
+      "description": "University sailing club",
+      "iconUri": "file:///android_asset/ic_akz_blue.png",
+      "importantEvents": 3,
+      "events": [
+        {
+          "name": "Eurodoc",
+          "function": "organizer"
+        },
+        {
+          "name": "BEAN",
+          "description": "Integration camp for new AGH students",
+          "function": "organizer"
+        },
+        {
+          "name": "AGH Solar Boat",
+          "function": "FR team member"
+        },
+        {
+          "name": "Multiple cruises",
+          "function": "attendant"
+        }
+      ]
+    },
+    {
+      "name": "Krakow Dragons - Quidditch Team",
+      "description": "Muggle quidditch sport team",
+      "iconUri": "file:///android_asset/ic_dragons_blue.png",
+      "importantEvents": 2,
+      "events": [
+        {
+          "name": "Board member"
+        },
+        {
+          "name": "PR coordinator",
+          "description": "Managing facebook profile, contact with media, managing PR team"
+        },
+        {
+          "name": "National champion",
+          "function": "team member"
+        },
+        {
+          "name": "National team",
+          "function": "team member"
+        }
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "label": "technical skills",
+      "labelColor": "#0000ff",
+      "goodLevelSkills": [
+        "Android",
+        "Java",
+        "AndroidTv",
+        "Clean code",
+        "Google Cast",
+        "Android Studio",
+        "Git"
+      ],
+      "mediumLevelSkills": [
+        "SQL",
+        "Gradle",
+        "REST",
+        "SOAP",
+        "PgSQL",
+        "Maven",
+        "UX",
+        "SDK Development",
+        "SVN",
+        "Spring",
+        "Design Patterns",
+        "Image Processing",
+        "Hibernate"
+      ],
+      "lowLevelSkills": [
+        "Javascript",
+        "JQuery",
+        "AngularJS",
+        "UML"
+      ]
+    },
+    {
+      "label": "soft skills",
+      "labelColor": "#00ff00",
+      "mediumLevelSkills": [
+        "Presentation",
+        "Communication",
+        "Time management",
+        "Feedback",
+        "Team working",
+        "Buisness etiquette"
+      ],
+      "lowLevelSkills": [
+        "Team management",
+        "Project management"
+      ]
+    },
+    {
+      "label": "interests",
+      "labelColor": "#ff0000",
+      "mediumLevelSkills": [
+        "Trafeling",
+        "Shooting",
+        "Muggle quidditch [sic!]",
+        "Meeting people",
+        "Board games",
+        "Technologies",
+        "Sailing",
+        "Sport",
+        "Talks",
+        "Beer brewing"
+      ]
+    }
+  ]
 }
