@@ -13,6 +13,7 @@ import com.example.mnowak.cirriculumvitae.databinding.ActivityMoreInfoBinding;
 import com.example.mnowak.cirriculumvitae.models.PersonalInfoViewModel;
 import com.example.mnowak.cirriculumvitae.ui.adapters.MoreInfoPagerAdapter;
 import com.example.mnowak.cirriculumvitae.ui.fragments.ExperienceFragment;
+import com.example.mnowak.cirriculumvitae.ui.fragments.SkillsFragment;
 import com.example.mnowak.cirriculumvitae.ui.fragments.StudiesActivitiesFragment;
 
 import java.util.ArrayList;
@@ -97,6 +98,7 @@ public class MoreInfoActivity extends AppCompatActivity {
         List<Fragment> screens = new ArrayList<>();
         screens.add(ExperienceFragment.newInstance(personalInfoViewModel.experience));
         screens.add(StudiesActivitiesFragment.newInstance(personalInfoViewModel.activities));
+        screens.add(SkillsFragment.newInstance(personalInfoViewModel.skills));
         return screens;
     }
 }

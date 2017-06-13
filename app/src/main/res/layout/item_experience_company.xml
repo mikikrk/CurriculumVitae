@@ -19,7 +19,7 @@
         android:paddingEnd="@dimen/data_box_elevation"
         android:paddingTop="@dimen/data_box_elevation"
         android:clipToPadding="false"
-        android:layout_marginBottom="@dimen/activity_margin"
+        android:layout_marginBottom="@dimen/more_info_content_gap"
         >
         <View
             android:id="@+id/vMarker"

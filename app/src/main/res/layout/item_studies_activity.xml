@@ -12,7 +12,10 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="@dimen/data_box_padding"
+        android:paddingTop="@dimen/data_box_padding"
+        android:paddingStart="@dimen/data_box_padding"
+        android:paddingEnd="@dimen/data_box_padding"
+        android:paddingBottom="6dp"
         android:elevation="@dimen/data_box_elevation"
         android:layout_marginTop="@dimen/data_box_elevation"
         android:layout_marginStart="@dimen/data_box_elevation"

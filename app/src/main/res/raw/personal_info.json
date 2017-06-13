@@ -54,7 +54,7 @@
       "name": "EESTEC AGH Kraków",
       "description": "Electronic Engineering Students’ European association",
       "iconUri": "file:///android_asset/ic_organization_blue.png",
-      "importantEvents": 4,
+      "importantEvents": 3,
       "events": [
         {
           "name": "Academical Projects Fair",
@@ -104,7 +104,7 @@
       "name": "Academical Sailing Club AGH",
       "description": "University sailing club",
       "iconUri": "file:///android_asset/ic_akz_blue.png",
-      "importantEvents": 3,
+      "importantEvents": 2,
       "events": [
         {
           "name": "Eurodoc",
@@ -151,8 +151,8 @@
   ],
   "skills": [
     {
-      "label": "technical skills",
-      "labelColor": "#0000ff",
+      "label": "#technical skills",
+      "labelColor": "#4990E2",
       "goodLevelSkills": [
         "Android",
         "Java",
@@ -185,15 +185,15 @@
       ]
     },
     {
-      "label": "soft skills",
-      "labelColor": "#00ff00",
+      "label": "#soft skills",
+      "labelColor": "#5DB200",
       "mediumLevelSkills": [
         "Presentation",
         "Communication",
+        "Buisness etiquette",
         "Time management",
         "Feedback",
-        "Team working",
-        "Buisness etiquette"
+        "Team working"
       ],
       "lowLevelSkills": [
         "Team management",
@@ -201,8 +201,8 @@
       ]
     },
     {
-      "label": "interests",
-      "labelColor": "#ff0000",
+      "label": "#interests",
+      "labelColor": "#F64723",
       "mediumLevelSkills": [
         "Trafeling",
         "Shooting",
