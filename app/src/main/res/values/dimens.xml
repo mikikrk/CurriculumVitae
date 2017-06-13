@@ -21,6 +21,7 @@
     <dimen name="more_info_floating_button_margin_aligning_more_ic_to_the_middle">-28dp</dimen>
 
     <dimen name="activity_margin">16dp</dimen>
+    <dimen name="disable_activity_margin">-16dp</dimen>
     <dimen name="more_info_content_gap">16dp</dimen>
 
     <dimen name="narrow_line_width">1dp</dimen>
@@ -31,7 +32,10 @@
     <dimen name="company_to_marker_triangle_pointer_size">32dp</dimen>
 
     <dimen name="data_box_padding">14dp</dimen>
-    <dimen name="position_icon_size">27dp</dimen>
+    <dimen name="data_box_icon_size">32dp</dimen>
     <dimen name="company_position_margin">4dp</dimen>
     <dimen name="marker_to_triangle_gap">16dp</dimen>
+    <dimen name="data_box_elevation">2dp</dimen>
+    <dimen name="more_events_width">18dp</dimen>
+    <dimen name="clickable_more_info_area">50dp</dimen>
 </resources>

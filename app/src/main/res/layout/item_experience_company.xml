@@ -15,9 +15,9 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="2dp"
-        android:paddingEnd="2dp"
-        android:paddingTop="2dp"
+        android:paddingBottom="@dimen/data_box_elevation"
+        android:paddingEnd="@dimen/data_box_elevation"
+        android:paddingTop="@dimen/data_box_elevation"
         android:clipToPadding="false"
         android:layout_marginBottom="@dimen/activity_margin"
         >
@@ -37,7 +37,7 @@
             android:layout_toEndOf="@+id/vCompanyToMarkerTrianglePointer"
             android:padding="@dimen/data_box_padding"
             android:clipToPadding="true"
-            android:elevation="2dp"
+            android:elevation="@dimen/data_box_elevation"
             android:background="@drawable/rounded_rectangle_white"
             >
 
@@ -83,8 +83,8 @@
                 android:text="@{viewModel.description}"/>
 
             <ImageView
-                android:layout_width="@dimen/position_icon_size"
-                android:layout_height="@dimen/position_icon_size"
+                android:layout_width="@dimen/data_box_icon_size"
+                android:layout_height="@dimen/data_box_icon_size"
                 android:scaleType="fitCenter"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
