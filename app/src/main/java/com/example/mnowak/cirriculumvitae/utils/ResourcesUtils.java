@@ -13,4 +13,5 @@ public class ResourcesUtils {
             return resources.getColor(colorRes);
         }
     }
+
 }

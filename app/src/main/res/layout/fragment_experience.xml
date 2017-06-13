@@ -1,12 +1,15 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/experience_additional_vertical_padding"
+    android:paddingBottom="@dimen/experience_additional_vertical_padding">
 
     <FrameLayout
         android:id="@+id/flChronologyLine"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:layout_marginStart="@dimen/chronology_left_margin">
+        android:layout_marginStart="@dimen/chronology_left_margin"
+        >
 
         <View
             android:layout_width="@dimen/chronology_element_width"

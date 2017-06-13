@@ -7,4 +7,10 @@
     <color name="colorTextPrimary">#646464</color>
     <color name="colorTextSecondary">#7F7F7F</color>
     <color name="colorTextRedundant">#A2A2A2</color>
+
+    <color name="colorLabelBackground">#f1eded</color>
+
+    <color name="colorGoodKnowledge">#5DB200</color>
+    <color name="colorMediumKnowledge">#00A4CF</color>
+    <color name="colorLowKnowledge">#ECA015</color>
 </resources>

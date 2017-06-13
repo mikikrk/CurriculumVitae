@@ -16,8 +16,9 @@
         android:checked="true"
         android:clickable="false"
         android:gravity="start|top"
-        android:paddingTop="6dp"
+        android:paddingTop="8dp"
         android:paddingStart="4dp"
         android:layout_marginStart="-6dp"
+        android:textSize="@dimen/more_info_regular_text_size"
         android:text="@{eventViewModel.getPreparedEventText(studiesViewModel.expanded)}"/>
 </layout>

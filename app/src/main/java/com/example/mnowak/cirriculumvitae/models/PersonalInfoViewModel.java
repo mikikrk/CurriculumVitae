@@ -14,4 +14,5 @@ public class PersonalInfoViewModel extends PicturedViewModel {
 
     public List<CompanyViewModel> experience;
     public List<StudiesActivityViewModel> activities;
+    public List<SkillsViewModel> skills;
 }
