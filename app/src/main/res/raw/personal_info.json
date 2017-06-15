@@ -4,7 +4,7 @@
   "birthDate": "20.05.1992",
   "phone": "790 379 512",
   "email": "mn.mikolaj.nowak@gmail.com",
-  "location": "Krakow",
+  "location": "Kraków",
   "photoUri": "file:///android_asset/mikolaj_nowak.png",
   "experience": [
     {
@@ -190,7 +190,7 @@
       "mediumLevelSkills": [
         "Presentation",
         "Communication",
-        "Buisness etiquette",
+        "Business etiquette",
         "Time management",
         "Feedback",
         "Team working"
@@ -204,7 +204,7 @@
       "label": "#interests",
       "labelColor": "#F64723",
       "mediumLevelSkills": [
-        "Trafeling",
+        "Traveling",
         "Shooting",
         "Muggle quidditch [sic!]",
         "Meeting people",

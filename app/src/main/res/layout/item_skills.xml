@@ -38,7 +38,7 @@
                 android:paddingEnd="@dimen/skill_item_horizontal_padding"
                 android:paddingStart="@dimen/skill_item_horizontal_padding"
                 android:text="@{viewModel.label}"
-                android:textAlignment="center"
+                android:gravity="center"
                 android:textColor="@color/colorTextSecondary"
                 android:textSize="@dimen/more_info_regular_text_size" />
 
