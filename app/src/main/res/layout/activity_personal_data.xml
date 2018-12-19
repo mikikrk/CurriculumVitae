@@ -1,12 +1,16 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+
     <data>
-        <variable name="viewModel" type="com.example.mnowak.cirriculumvitae.models.PersonalInfoViewModel" />
+
+        <variable
+            name="viewModel"
+            type="com.example.mnowak.cirriculumvitae.model.PersonalInfoViewModel" />
     </data>
+
     <RelativeLayout
-        android:layout_height="match_parent"
         android:layout_width="match_parent"
-        >
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:id="@+id/llDataContainer"
@@ -14,106 +18,98 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:orientation="vertical"
-            android:padding="@dimen/personal_data_padding"
-            >
+            android:padding="@dimen/personal_data_padding">
 
             <TextView
                 android:id="@+id/tvName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/colorTextPrimary"
-                android:textSize="@dimen/header_text_size"
                 android:text="@{viewModel.name}"
-                />
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="@dimen/header_text_size" />
 
             <TextView
                 android:id="@+id/tvPosition"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/colorTextRedundant"
-                android:textSize="@dimen/subheader_text_size"
                 android:text="@{viewModel.position}"
-                />
+                android:textColor="@color/colorTextRedundant"
+                android:textSize="@dimen/subheader_text_size" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/iconed_text_view_height"
-                android:textSize="@dimen/regular_text_size"
-                android:textColor="@color/colorTextSecondary"
                 android:layout_margin="@dimen/fields_gap"
-                android:text="@{viewModel.birthDate}"
                 android:drawableStart="@drawable/ic_birtday_blue"
-                android:drawablePadding="@dimen/iconed_text_view_gap"/>
+                android:drawablePadding="@dimen/iconed_text_view_gap"
+                android:text="@{viewModel.birthDate}"
+                android:textColor="@color/colorTextSecondary"
+                android:textSize="@dimen/regular_text_size" />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
-                android:background="@drawable/divider_line"/>
+                android:background="@drawable/divider_line" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/iconed_text_view_height"
-                android:textSize="@dimen/regular_text_size"
-                android:textColor="@color/colorTextSecondary"
                 android:layout_margin="@dimen/fields_gap"
-                android:text="@{viewModel.phone}"
                 android:drawableStart="@drawable/ic_phone_blue"
-                android:drawablePadding="@dimen/iconed_text_view_gap"/>
+                android:drawablePadding="@dimen/iconed_text_view_gap"
+                android:text="@{viewModel.phone}"
+                android:textColor="@color/colorTextSecondary"
+                android:textSize="@dimen/regular_text_size" />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
-                android:background="@drawable/divider_line"/>
+                android:background="@drawable/divider_line" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/iconed_text_view_height"
-                android:textSize="@dimen/regular_text_size"
-                android:textColor="@color/colorTextSecondary"
                 android:layout_margin="@dimen/fields_gap"
-                android:text="@{viewModel.email}"
                 android:drawableStart="@drawable/ic_mail_blue"
-                android:drawablePadding="@dimen/iconed_text_view_gap"/>
+                android:drawablePadding="@dimen/iconed_text_view_gap"
+                android:text="@{viewModel.email}"
+                android:textColor="@color/colorTextSecondary"
+                android:textSize="@dimen/regular_text_size" />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
-                android:background="@drawable/divider_line"/>
+                android:background="@drawable/divider_line" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/iconed_text_view_height"
-                android:textSize="@dimen/regular_text_size"
-                android:textColor="@color/colorTextSecondary"
                 android:layout_margin="@dimen/fields_gap"
-                android:text="@{viewModel.location}"
                 android:drawableStart="@drawable/ic_location_blue"
-                android:drawablePadding="@dimen/iconed_text_view_gap"/>
-
+                android:drawablePadding="@dimen/iconed_text_view_gap"
+                android:text="@{viewModel.location}"
+                android:textColor="@color/colorTextSecondary"
+                android:textSize="@dimen/regular_text_size" />
         </LinearLayout>
 
         <ImageView
             android:id="@+id/ivPhoto"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_alignParentTop="true"
             android:layout_above="@id/llDataContainer"
-            android:scaleType="centerCrop"
+            android:layout_alignParentTop="true"
             android:elevation="2dp"
-            app:imageUrl="@{viewModel.photoUri}"
-            />
+            android:scaleType="centerCrop"
+            app:imageUrl="@{viewModel.photoUri}" />
 
         <android.support.design.widget.FloatingActionButton
             android:id="@+id/fabMoreInfo"
             android:layout_width="@dimen/floating_button_size"
             android:layout_height="@dimen/floating_button_size"
-            android:layout_marginTop="@dimen/more_info_floating_button_margin_aligning_more_ic_to_the_middle"
-            android:layout_marginEnd="@dimen/fab_margin"
             android:layout_alignTop="@id/llDataContainer"
             android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/more_info_floating_button_margin_aligning_more_ic_to_the_middle"
+            android:layout_marginEnd="@dimen/fab_margin"
             app:srcCompat="@drawable/ic_more_horiz_white_24dp" />
-
-
-
     </RelativeLayout>
 </layout>

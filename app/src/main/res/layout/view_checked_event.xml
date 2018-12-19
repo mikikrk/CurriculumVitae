@@ -1,24 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
     <data>
-        <import type="android.text.Html"/>
+
+        <import type="android.text.Html" />
+
         <variable
             name="eventViewModel"
-            type="com.example.mnowak.cirriculumvitae.models.StudiesActivityViewModel.EventViewModel" />
+            type="com.example.mnowak.cirriculumvitae.model.StudiesActivityViewModel.EventViewModel" />
+
         <variable
             name="studiesViewModel"
-            type="com.example.mnowak.cirriculumvitae.models.StudiesActivityViewModel" />
+            type="com.example.mnowak.cirriculumvitae.model.StudiesActivityViewModel" />
     </data>
+
     <android.support.v7.widget.AppCompatCheckBox
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="-6dp"
         android:checked="true"
         android:clickable="false"
         android:gravity="start|top"
-        android:paddingTop="8dp"
         android:paddingStart="4dp"
-        android:layout_marginStart="-6dp"
-        android:textSize="@dimen/more_info_regular_text_size"
-        android:text="@{eventViewModel.getPreparedEventText(studiesViewModel.expanded)}"/>
+        android:paddingTop="8dp"
+        android:text="@{eventViewModel.getPreparedEventText(studiesViewModel.expanded)}"
+        android:textSize="@dimen/more_info_regular_text_size" />
 </layout>

@@ -1,4 +1,4 @@
-package com.example.mnowak.cirriculumvitae.ui.adapters;
+package com.example.mnowak.cirriculumvitae.feature.moreInfo.fragment.skills;
 
 import android.content.Context;
 import android.support.annotation.Dimension;
@@ -11,7 +11,7 @@ import android.widget.LinearLayout;
 
 import com.example.mnowak.cirriculumvitae.R;
 import com.example.mnowak.cirriculumvitae.databinding.ItemSkillsBinding;
-import com.example.mnowak.cirriculumvitae.models.SkillsViewModel;
+import com.example.mnowak.cirriculumvitae.model.SkillsViewModel;
 import com.example.mnowak.cirriculumvitae.ui.widgets.SkillTextView;
 
 import java.util.ArrayList;
@@ -25,19 +25,20 @@ public class SkillsRecyclerViewAdapter extends RecyclerView.Adapter<SkillsRecycl
     private ItemSkillsBinding itemBinding;
     private List<SkillsViewModel> skills;
 
-    public SkillsRecyclerViewAdapter(List<SkillsViewModel> skills) {
+    SkillsRecyclerViewAdapter(List<SkillsViewModel> skills) {
         this.skills = skills;
     }
     
+    @NonNull
     @Override
-    public SkillsViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public SkillsViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
         itemBinding = ItemSkillsBinding.inflate(layoutInflater, parent, false);
         return new SkillsViewHolder(itemBinding);
     }
 
     @Override
-    public void onBindViewHolder(SkillsViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull SkillsViewHolder holder, int position) {
         SkillsViewModel studiesActivityViewModel = skills.get(position);
         holder.bind(studiesActivityViewModel);
     }
@@ -48,7 +49,7 @@ public class SkillsRecyclerViewAdapter extends RecyclerView.Adapter<SkillsRecycl
     }
 
     @Override
-    public void onViewRecycled(SkillsViewHolder holder) {
+    public void onViewRecycled(@NonNull SkillsViewHolder holder) {
         super.onViewRecycled(holder);
         holder.clear();
     }

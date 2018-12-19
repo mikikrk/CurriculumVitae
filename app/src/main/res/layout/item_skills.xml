@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:bind="http://schemas.android.com/apk/res-auto">
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
 
     <data>
+
         <import type="android.graphics.Color" />
+
         <variable
             name="viewModel"
-            type="com.example.mnowak.cirriculumvitae.models.SkillsViewModel" />
+            type="com.example.mnowak.cirriculumvitae.model.SkillsViewModel" />
     </data>
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="@dimen/data_box_elevation"
-        android:paddingBottom="@dimen/data_box_elevation"
+        android:layout_marginBottom="@dimen/more_info_content_gap"
         android:clipToPadding="false"
-        android:layout_marginBottom="@dimen/more_info_content_gap">
+        android:paddingTop="@dimen/data_box_elevation"
+        android:paddingBottom="@dimen/data_box_elevation">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -30,15 +30,15 @@
                 android:id="@+id/tvName"
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/skills_label_height"
-                android:layout_alignParentEnd="true"
                 android:layout_alignParentTop="true"
-                android:layout_marginBottom="@dimen/skill_items_vertical_gap"
+                android:layout_alignParentEnd="true"
                 android:layout_marginTop="@dimen/skill_items_vertical_gap"
+                android:layout_marginBottom="@dimen/skill_items_vertical_gap"
                 android:background="@color/colorLabelBackground"
-                android:paddingEnd="@dimen/skill_item_horizontal_padding"
-                android:paddingStart="@dimen/skill_item_horizontal_padding"
-                android:text="@{viewModel.label}"
                 android:gravity="center"
+                android:paddingStart="@dimen/skill_item_horizontal_padding"
+                android:paddingEnd="@dimen/skill_item_horizontal_padding"
+                android:text="@{viewModel.label}"
                 android:textColor="@color/colorTextSecondary"
                 android:textSize="@dimen/more_info_regular_text_size" />
 
@@ -48,9 +48,9 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/tvName"
                 android:orientation="vertical"
-                android:paddingBottom="@dimen/data_box_padding"
+                android:paddingStart="@dimen/data_box_padding"
                 android:paddingEnd="@dimen/data_box_padding"
-                android:paddingStart="@dimen/data_box_padding"/>
+                android:paddingBottom="@dimen/data_box_padding" />
 
         </RelativeLayout>
 

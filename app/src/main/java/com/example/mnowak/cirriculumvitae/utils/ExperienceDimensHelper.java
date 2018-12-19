@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import com.example.mnowak.cirriculumvitae.R;
 
 public class ExperienceDimensHelper {
+
     private Resources resources;
     private @Dimension int markerTopMargin;
     private @Dimension int markerSize;

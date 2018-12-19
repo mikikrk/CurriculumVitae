@@ -6,6 +6,7 @@ import android.support.annotation.ColorInt;
 import android.support.annotation.ColorRes;
 
 public class ResourcesUtils {
+
     public static @ColorInt int getColor(Resources resources, @ColorRes int colorRes) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             return resources.getColor(colorRes, null);
@@ -13,5 +14,4 @@ public class ResourcesUtils {
             return resources.getColor(colorRes);
         }
     }
-
 }

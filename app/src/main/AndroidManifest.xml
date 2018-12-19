@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".ui.activities.PersonalDataActivity"
+            android:name=".feature.personal.PersonalDataActivity"
             android:label="@string/android_developers"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -20,7 +20,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.activities.MoreInfoActivity"
+            android:name=".feature.moreInfo.MoreInfoActivity"
             android:screenOrientation="portrait"/>
     </application>
 
