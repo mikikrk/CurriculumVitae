@@ -1,6 +1,7 @@
-package com.example.mnowak.cirriculumvitae.ui.adapters;
+package com.example.mnowak.cirriculumvitae.feature.moreInfo.fragment.studiesActivities;
 
 import android.databinding.DataBindingUtil;
+import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
@@ -9,7 +10,7 @@ import android.widget.LinearLayout;
 import com.example.mnowak.cirriculumvitae.R;
 import com.example.mnowak.cirriculumvitae.databinding.ItemStudiesActivityBinding;
 import com.example.mnowak.cirriculumvitae.databinding.ViewCheckedEventBinding;
-import com.example.mnowak.cirriculumvitae.models.StudiesActivityViewModel;
+import com.example.mnowak.cirriculumvitae.model.StudiesActivityViewModel;
 
 import java.util.List;
 
@@ -18,19 +19,20 @@ public class StudiesActivitiesRecyclerViewAdapter extends RecyclerView.Adapter<S
     private List<StudiesActivityViewModel> studiesActivityViewModels;
     private ItemStudiesActivityBinding itemBinding;
 
-    public StudiesActivitiesRecyclerViewAdapter(List<StudiesActivityViewModel> studiesActivityViewModels) {
+    StudiesActivitiesRecyclerViewAdapter(List<StudiesActivityViewModel> studiesActivityViewModels) {
         this.studiesActivityViewModels = studiesActivityViewModels;
     }
 
+    @NonNull
     @Override
-    public ActivityViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public ActivityViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
         itemBinding = ItemStudiesActivityBinding.inflate(layoutInflater, parent, false);
         return new ActivityViewHolder(itemBinding);
     }
 
     @Override
-    public void onBindViewHolder(ActivityViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ActivityViewHolder holder, int position) {
         StudiesActivityViewModel studiesActivityViewModel = studiesActivityViewModels.get(position);
         holder.bind(studiesActivityViewModel);
     }
@@ -41,7 +43,7 @@ public class StudiesActivitiesRecyclerViewAdapter extends RecyclerView.Adapter<S
     }
 
     @Override
-    public void onViewRecycled(ActivityViewHolder holder) {
+    public void onViewRecycled(@NonNull ActivityViewHolder holder) {
         super.onViewRecycled(holder);
         holder.clear();
     }
@@ -53,7 +55,7 @@ public class StudiesActivitiesRecyclerViewAdapter extends RecyclerView.Adapter<S
         private LinearLayout llImportantEvents;
         private LinearLayout llRedundantEvents;
 
-        public ActivityViewHolder(ItemStudiesActivityBinding itemBinding) {
+        ActivityViewHolder(ItemStudiesActivityBinding itemBinding) {
             super(itemBinding.getRoot());
             this.itemBinding = itemBinding;
             llImportantEvents = itemBinding.llImportantEvents;

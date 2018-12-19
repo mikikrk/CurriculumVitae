@@ -1,4 +1,4 @@
-package com.example.mnowak.cirriculumvitae.models;
+package com.example.mnowak.cirriculumvitae.model;
 
 import java.util.List;
 

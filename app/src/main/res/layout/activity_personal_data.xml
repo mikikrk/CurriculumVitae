@@ -1,7 +1,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <data>
-        <variable name="viewModel" type="com.example.mnowak.cirriculumvitae.models.PersonalInfoViewModel" />
+        <variable name="viewModel" type="com.example.mnowak.cirriculumvitae.model.PersonalInfoViewModel" />
     </data>
     <RelativeLayout
         android:layout_height="match_parent"

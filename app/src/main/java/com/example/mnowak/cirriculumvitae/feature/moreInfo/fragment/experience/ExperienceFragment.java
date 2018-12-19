@@ -1,6 +1,7 @@
-package com.example.mnowak.cirriculumvitae.ui.fragments;
+package com.example.mnowak.cirriculumvitae.feature.moreInfo.fragment.experience;
 
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -10,8 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.mnowak.cirriculumvitae.R;
-import com.example.mnowak.cirriculumvitae.models.CompanyViewModel;
-import com.example.mnowak.cirriculumvitae.ui.adapters.CompaniesRecyclerViewAdapter;
+import com.example.mnowak.cirriculumvitae.model.CompanyViewModel;
 
 import java.io.Serializable;
 import java.util.Arrays;
@@ -43,13 +43,13 @@ public class ExperienceFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_experience, container, false);
     }
 
     @Override
-    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
         ButterKnife.bind(this, view);
@@ -59,7 +59,7 @@ public class ExperienceFragment extends Fragment {
     private void readArguments() {
         if (getArguments() != null) {
             Serializable serializableExperience = getArguments().getSerializable(ARG_EXPERIENCE_MODEL);
-            if (serializableExperience != null && serializableExperience instanceof CompanyViewModel[]) {
+            if (serializableExperience instanceof CompanyViewModel[]) {
                 experience = Arrays.asList((CompanyViewModel[]) serializableExperience);
             }
         }
@@ -67,6 +67,6 @@ public class ExperienceFragment extends Fragment {
 
     private void setupRecyclerView() {
         rvCompanies.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
-        rvCompanies.setAdapter(new CompaniesRecyclerViewAdapter(experience, getContext()));
+        rvCompanies.setAdapter(new CompaniesRecyclerViewAdapter(experience, requireContext()));
     }
 }

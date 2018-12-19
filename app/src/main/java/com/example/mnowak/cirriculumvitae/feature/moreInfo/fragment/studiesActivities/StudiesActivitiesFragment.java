@@ -1,6 +1,7 @@
-package com.example.mnowak.cirriculumvitae.ui.fragments;
+package com.example.mnowak.cirriculumvitae.feature.moreInfo.fragment.studiesActivities;
 
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -10,8 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.mnowak.cirriculumvitae.R;
-import com.example.mnowak.cirriculumvitae.models.StudiesActivityViewModel;
-import com.example.mnowak.cirriculumvitae.ui.adapters.StudiesActivitiesRecyclerViewAdapter;
+import com.example.mnowak.cirriculumvitae.model.StudiesActivityViewModel;
 
 import java.io.Serializable;
 import java.util.Arrays;
@@ -45,7 +45,7 @@ public class StudiesActivitiesFragment extends Fragment {
     private void readArguments() {
         if (getArguments() != null) {
             Serializable serializableActivities = getArguments().getSerializable(ARG_ACTIVITIES_MODEL);
-            if (serializableActivities != null && serializableActivities instanceof StudiesActivityViewModel[]) {
+            if (serializableActivities instanceof StudiesActivityViewModel[]) {
                 studiesActivities = Arrays.asList((StudiesActivityViewModel[]) serializableActivities);
             }
         }
@@ -53,12 +53,12 @@ public class StudiesActivitiesFragment extends Fragment {
 
     @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_recycler_view, container, false);
     }
 
     @Override
-    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         ButterKnife.bind(this, view);
         recyclerView.setAdapter(new StudiesActivitiesRecyclerViewAdapter(studiesActivities));

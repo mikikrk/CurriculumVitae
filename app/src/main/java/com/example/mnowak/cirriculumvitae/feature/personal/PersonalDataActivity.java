@@ -1,4 +1,4 @@
-package com.example.mnowak.cirriculumvitae.ui.activities;
+package com.example.mnowak.cirriculumvitae.feature.personal;
 
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
@@ -8,7 +8,8 @@ import android.support.v7.app.AppCompatActivity;
 
 import com.example.mnowak.cirriculumvitae.R;
 import com.example.mnowak.cirriculumvitae.databinding.ActivityPersonalDataBinding;
-import com.example.mnowak.cirriculumvitae.models.PersonalInfoViewModel;
+import com.example.mnowak.cirriculumvitae.feature.moreInfo.MoreInfoActivity;
+import com.example.mnowak.cirriculumvitae.model.PersonalInfoViewModel;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
