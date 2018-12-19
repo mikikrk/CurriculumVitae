@@ -8,6 +8,13 @@
   "photoUri": "file:///android_asset/mikolaj_nowak.png",
   "experience": [
     {
+      "name": "BonfireIT/SportsBroker",
+      "employmentTime": "06.2017 - 01.2019",
+      "position": "Lead Android Developer",
+      "description": "Leading development of SportsBroker application - sport trading app, where results influence into prices.",
+      "iconUri": "file:///android_asset/ic_android_kotlin.png"
+    },
+    {
       "name": "ColorTv",
       "employmentTime": "01.2016 - 06.2017",
       "position": "Android Developer",
@@ -155,48 +162,46 @@
       "labelColor": "#4990E2",
       "goodLevelSkills": [
         "Android",
+        "Kotlin",
         "Java",
-        "AndroidTv",
+        "Android Architecture Components",
+        "Firebase Realtime Database",
         "Clean code",
-        "Google Cast",
         "Android Studio",
         "Git"
       ],
       "mediumLevelSkills": [
-        "SQL",
         "Gradle",
-        "REST",
-        "SOAP",
-        "PgSQL",
-        "Maven",
-        "UX",
-        "SDK Development",
-        "SVN",
-        "Spring",
         "Design Patterns",
-        "Image Processing",
-        "Hibernate"
+        "JavaRX",
+        "Dagger2",
+        "SQL",
+        "REST",
+        "AndroidTv",
+        "Google Cast",
+        "SDK Development",
+        "Image Processing"
       ],
       "lowLevelSkills": [
         "Javascript",
-        "JQuery",
-        "AngularJS",
         "UML"
       ]
     },
     {
       "label": "#soft skills",
       "labelColor": "#5DB200",
+      "goodLevelSkills": [
+        "Communication"
+      ],
       "mediumLevelSkills": [
         "Presentation",
-        "Communication",
+        "Team management",
         "Business etiquette",
         "Time management",
         "Feedback",
         "Team working"
       ],
       "lowLevelSkills": [
-        "Team management",
         "Project management"
       ]
     },
@@ -205,12 +210,12 @@
       "labelColor": "#F64723",
       "mediumLevelSkills": [
         "Traveling",
-        "Shooting",
-        "Muggle quidditch [sic!]",
+        "Sailing",
         "Meeting people",
         "Board games",
         "Technologies",
-        "Sailing",
+        "Shooting",
+        "Muggle quidditch [sic!]",
         "Sport",
         "Talks",
         "Beer brewing"
