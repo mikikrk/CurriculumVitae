@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:bind="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
     <data>
-        <import type="android.view.View"/>
+
+        <import type="android.view.View" />
+
         <variable
             name="viewModel"
             type="com.example.mnowak.cirriculumvitae.model.StudiesActivityViewModel" />
@@ -12,16 +14,16 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="@dimen/data_box_padding"
-        android:paddingStart="@dimen/data_box_padding"
-        android:paddingEnd="@dimen/data_box_padding"
-        android:paddingBottom="6dp"
-        android:elevation="@dimen/data_box_elevation"
-        android:layout_marginTop="@dimen/data_box_elevation"
         android:layout_marginStart="@dimen/data_box_elevation"
+        android:layout_marginTop="@dimen/data_box_elevation"
         android:layout_marginEnd="@dimen/data_box_elevation"
         android:layout_marginBottom="@dimen/more_info_content_gap"
-        android:background="@drawable/slightly_rounded_rectangle_white">
+        android:background="@drawable/slightly_rounded_rectangle_white"
+        android:elevation="@dimen/data_box_elevation"
+        android:paddingStart="@dimen/data_box_padding"
+        android:paddingTop="@dimen/data_box_padding"
+        android:paddingEnd="@dimen/data_box_padding"
+        android:paddingBottom="6dp">
 
         <ImageView
             android:id="@+id/ivIcon"
@@ -30,7 +32,7 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_marginEnd="@dimen/data_box_padding"
-            app:imageUrl="@{viewModel.iconUri}"/>
+            app:imageUrl="@{viewModel.iconUri}" />
 
         <TextView
             android:id="@+id/tvName"
@@ -38,10 +40,9 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_toEndOf="@id/ivIcon"
-            android:textSize="@dimen/more_info_header_text_size"
-            android:textColor="@color/colorTextPrimary"
             android:text="@{viewModel.name}"
-            />
+            android:textColor="@color/colorTextPrimary"
+            android:textSize="@dimen/more_info_header_text_size" />
 
         <TextView
             android:id="@+id/tvDescription"
@@ -49,10 +50,9 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/tvName"
             android:layout_toEndOf="@id/ivIcon"
-            android:textSize="@dimen/more_info_redundant_header_text_size"
-            android:textColor="@color/colorTextRedundant"
             android:text="@{viewModel.description}"
-            />
+            android:textColor="@color/colorTextRedundant"
+            android:textSize="@dimen/more_info_redundant_header_text_size" />
 
         <LinearLayout
             android:id="@+id/llImportantEvents"
@@ -78,30 +78,30 @@
         <View
             android:layout_width="@dimen/clickable_more_info_area"
             android:layout_height="@dimen/clickable_more_info_area"
-            android:layout_alignParentBottom="true"
             android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
             android:layout_marginEnd="@dimen/disable_activity_margin"
             android:layout_marginBottom="@dimen/disable_activity_margin"
             android:background="@android:color/transparent"
-            android:onClick="@{() -> viewModel.toggleExpanded()}"/>
+            android:onClick="@{() -> viewModel.toggleExpanded()}" />
 
         <ImageView
             android:layout_width="@dimen/more_events_width"
             android:layout_height="wrap_content"
+            android:layout_below="@id/llRedundantEvents"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_below="@id/llRedundantEvents"
-            android:visibility="@{(viewModel.importantEvents == 0 || viewModel.importantEvents > viewModel.events.size() || viewModel.expanded) ? View.GONE : View.VISIBLE}"
-            android:src="@drawable/ic_expand_more_blue"/>
+            android:src="@drawable/ic_expand_more_blue"
+            android:visibility="@{(viewModel.importantEvents == 0 || viewModel.importantEvents > viewModel.events.size() || viewModel.expanded) ? View.GONE : View.VISIBLE}" />
 
         <ImageView
             android:layout_width="@dimen/more_events_width"
             android:layout_height="wrap_content"
+            android:layout_below="@id/llRedundantEvents"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_below="@id/llRedundantEvents"
-            android:visibility="@{viewModel.expanded ? View.VISIBLE : View.GONE}"
-            android:src="@drawable/ic_expand_less_blue"/>
+            android:src="@drawable/ic_expand_less_blue"
+            android:visibility="@{viewModel.expanded ? View.VISIBLE : View.GONE}" />
 
     </RelativeLayout>
 </layout>
