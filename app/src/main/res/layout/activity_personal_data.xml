@@ -5,7 +5,7 @@
 
         <variable
             name="viewModel"
-            type="com.example.mnowak.cirriculumvitae.model.PersonalInfoViewModel" />
+            type="com.mnowak.cirriculumvitae.model.PersonalInfoViewModel" />
     </data>
 
     <RelativeLayout
@@ -102,7 +102,7 @@
             android:scaleType="centerCrop"
             app:imageUrl="@{viewModel.photoUri}" />
 
-        <android.support.design.widget.FloatingActionButton
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fabMoreInfo"
             android:layout_width="@dimen/floating_button_size"
             android:layout_height="@dimen/floating_button_size"

@@ -7,14 +7,14 @@
 
         <variable
             name="eventViewModel"
-            type="com.example.mnowak.cirriculumvitae.model.StudiesActivityViewModel.EventViewModel" />
+            type="com.mnowak.cirriculumvitae.model.StudiesActivityViewModel.EventViewModel" />
 
         <variable
             name="studiesViewModel"
-            type="com.example.mnowak.cirriculumvitae.model.StudiesActivityViewModel" />
+            type="com.mnowak.cirriculumvitae.model.StudiesActivityViewModel" />
     </data>
 
-    <android.support.v7.widget.AppCompatCheckBox
+    <androidx.appcompat.widget.AppCompatCheckBox
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="-6dp"
