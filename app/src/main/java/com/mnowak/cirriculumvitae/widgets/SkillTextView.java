@@ -1,4 +1,4 @@
-package com.example.mnowak.cirriculumvitae.ui.widgets;
+package com.mnowak.cirriculumvitae.widgets;
 
 import android.content.Context;
 import android.content.res.Resources;
@@ -12,8 +12,8 @@ import android.util.TypedValue;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
-import com.example.mnowak.cirriculumvitae.R;
-import com.example.mnowak.cirriculumvitae.utils.ResourcesUtils;
+import com.mnowak.cirriculumvitae.R;
+import com.mnowak.cirriculumvitae.utils.ResourcesUtils;
 
 public class SkillTextView extends AppCompatTextView {
 

@@ -1,4 +1,4 @@
-package com.example.mnowak.cirriculumvitae.utils;
+package com.mnowak.cirriculumvitae.utils;
 
 import android.content.res.Resources;
 import android.os.Build;

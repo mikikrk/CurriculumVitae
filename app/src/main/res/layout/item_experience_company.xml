@@ -6,11 +6,11 @@
 
         <variable
             name="viewModel"
-            type="com.example.mnowak.cirriculumvitae.model.CompanyViewModel" />
+            type="com.mnowak.cirriculumvitae.model.CompanyViewModel" />
 
         <variable
             name="dimensHelper"
-            type="com.example.mnowak.cirriculumvitae.utils.ExperienceDimensHelper" />
+            type="com.mnowak.cirriculumvitae.utils.ExperienceDimensHelper" />
     </data>
 
     <RelativeLayout

@@ -1,4 +1,4 @@
-package com.example.mnowak.cirriculumvitae.feature.moreInfo.fragment.skills;
+package com.mnowak.cirriculumvitae.feature.moreInfo.fragment.skills;
 
 import android.content.Context;
 import android.support.annotation.Dimension;
@@ -9,10 +9,10 @@ import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
 import android.widget.LinearLayout;
 
-import com.example.mnowak.cirriculumvitae.R;
-import com.example.mnowak.cirriculumvitae.databinding.ItemSkillsBinding;
-import com.example.mnowak.cirriculumvitae.model.SkillsViewModel;
-import com.example.mnowak.cirriculumvitae.ui.widgets.SkillTextView;
+import com.mnowak.cirriculumvitae.R;
+import com.mnowak.cirriculumvitae.databinding.ItemSkillsBinding;
+import com.mnowak.cirriculumvitae.model.SkillsViewModel;
+import com.mnowak.cirriculumvitae.widgets.SkillTextView;
 
 import java.util.ArrayList;
 import java.util.Iterator;

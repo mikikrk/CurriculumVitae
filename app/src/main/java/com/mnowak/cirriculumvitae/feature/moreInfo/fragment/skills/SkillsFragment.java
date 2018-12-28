@@ -1,4 +1,4 @@
-package com.example.mnowak.cirriculumvitae.feature.moreInfo.fragment.studiesActivities;
+package com.mnowak.cirriculumvitae.feature.moreInfo.fragment.skills;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -10,8 +10,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.mnowak.cirriculumvitae.R;
-import com.example.mnowak.cirriculumvitae.model.StudiesActivityViewModel;
+import com.mnowak.cirriculumvitae.R;
+import com.mnowak.cirriculumvitae.model.SkillsViewModel;
 
 import java.io.Serializable;
 import java.util.Arrays;
@@ -20,17 +20,18 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class StudiesActivitiesFragment extends Fragment {
-    private static final String ARG_ACTIVITIES_MODEL = "activitiesModel";
+public class SkillsFragment extends Fragment {
+    private static final String ARG_SKILLS_MODEL = "skillsModel";
+
     @BindView(R.id.recyclerView)
     RecyclerView recyclerView;
 
-    private List<StudiesActivityViewModel> studiesActivities;
+    private List<SkillsViewModel> skills;
 
-    public static StudiesActivitiesFragment newInstance(List<StudiesActivityViewModel> studiesActivities) {
+    public static SkillsFragment newInstance(List<SkillsViewModel> skills) {
         Bundle args = new Bundle();
-        args.putSerializable(ARG_ACTIVITIES_MODEL, studiesActivities.toArray(new StudiesActivityViewModel[]{}));
-        StudiesActivitiesFragment fragment = new StudiesActivitiesFragment();
+        args.putSerializable(ARG_SKILLS_MODEL, skills.toArray(new SkillsViewModel[]{}));
+        SkillsFragment fragment = new SkillsFragment();
         fragment.setArguments(args);
         return fragment;
     }
@@ -44,9 +45,9 @@ public class StudiesActivitiesFragment extends Fragment {
 
     private void readArguments() {
         if (getArguments() != null) {
-            Serializable serializableActivities = getArguments().getSerializable(ARG_ACTIVITIES_MODEL);
-            if (serializableActivities instanceof StudiesActivityViewModel[]) {
-                studiesActivities = Arrays.asList((StudiesActivityViewModel[]) serializableActivities);
+            Serializable serializableActivities = getArguments().getSerializable(ARG_SKILLS_MODEL);
+            if (serializableActivities instanceof SkillsViewModel[]) {
+                skills = Arrays.asList((SkillsViewModel[]) serializableActivities);
             }
         }
     }
@@ -61,7 +62,7 @@ public class StudiesActivitiesFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         ButterKnife.bind(this, view);
-        recyclerView.setAdapter(new StudiesActivitiesRecyclerViewAdapter(studiesActivities));
+        recyclerView.setAdapter(new SkillsRecyclerViewAdapter(skills));
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
     }
 }

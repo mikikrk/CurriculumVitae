@@ -1,4 +1,4 @@
-package com.example.mnowak.cirriculumvitae.feature.moreInfo;
+package com.mnowak.cirriculumvitae.feature.moreInfo;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;

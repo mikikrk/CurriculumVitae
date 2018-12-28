@@ -1,4 +1,4 @@
-package com.example.mnowak.cirriculumvitae.model;
+package com.mnowak.cirriculumvitae.model;
 
 import android.content.res.Resources;
 import android.databinding.ObservableField;
@@ -13,8 +13,8 @@ import android.text.style.ForegroundColorSpan;
 import android.text.style.StyleSpan;
 import android.view.View;
 
-import com.example.mnowak.cirriculumvitae.R;
-import com.example.mnowak.cirriculumvitae.utils.ResourcesUtils;
+import com.mnowak.cirriculumvitae.R;
+import com.mnowak.cirriculumvitae.utils.ResourcesUtils;
 
 import java.io.Serializable;
 import java.util.List;

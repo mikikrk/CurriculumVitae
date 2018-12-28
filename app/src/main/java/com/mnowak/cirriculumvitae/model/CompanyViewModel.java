@@ -1,4 +1,4 @@
-package com.example.mnowak.cirriculumvitae.model;
+package com.mnowak.cirriculumvitae.model;
 
 public class CompanyViewModel extends PicturedViewModel {
     public String name;

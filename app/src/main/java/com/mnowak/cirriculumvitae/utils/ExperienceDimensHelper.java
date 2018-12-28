@@ -1,4 +1,4 @@
-package com.example.mnowak.cirriculumvitae.utils;
+package com.mnowak.cirriculumvitae.utils;
 
 import android.content.res.Resources;
 import android.databinding.BindingAdapter;
@@ -6,7 +6,7 @@ import android.support.annotation.Dimension;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.mnowak.cirriculumvitae.R;
+import com.mnowak.cirriculumvitae.R;
 
 public class ExperienceDimensHelper {
 

@@ -1,4 +1,4 @@
-package com.example.mnowak.cirriculumvitae.feature.moreInfo.fragment.experience;
+package com.mnowak.cirriculumvitae.feature.moreInfo.fragment.experience;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -6,9 +6,9 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
-import com.example.mnowak.cirriculumvitae.databinding.ItemExperienceCompanyBinding;
-import com.example.mnowak.cirriculumvitae.model.CompanyViewModel;
-import com.example.mnowak.cirriculumvitae.utils.ExperienceDimensHelper;
+import com.mnowak.cirriculumvitae.databinding.ItemExperienceCompanyBinding;
+import com.mnowak.cirriculumvitae.model.CompanyViewModel;
+import com.mnowak.cirriculumvitae.utils.ExperienceDimensHelper;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.example.mnowak.cirriculumvitae.model;
+package com.mnowak.cirriculumvitae.model;
 
 import android.databinding.BindingAdapter;
 import android.widget.ImageView;

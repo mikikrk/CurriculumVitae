@@ -1,4 +1,4 @@
-package com.example.mnowak.cirriculumvitae.feature.moreInfo.fragment.experience;
+package com.mnowak.cirriculumvitae.feature.moreInfo.fragment.experience;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -10,8 +10,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.mnowak.cirriculumvitae.R;
-import com.example.mnowak.cirriculumvitae.model.CompanyViewModel;
+import com.mnowak.cirriculumvitae.R;
+import com.mnowak.cirriculumvitae.model.CompanyViewModel;
 
 import java.io.Serializable;
 import java.util.Arrays;

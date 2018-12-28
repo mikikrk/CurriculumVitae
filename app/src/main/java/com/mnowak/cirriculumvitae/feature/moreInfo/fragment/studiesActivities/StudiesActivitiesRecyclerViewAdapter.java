@@ -1,4 +1,4 @@
-package com.example.mnowak.cirriculumvitae.feature.moreInfo.fragment.studiesActivities;
+package com.mnowak.cirriculumvitae.feature.moreInfo.fragment.studiesActivities;
 
 import android.databinding.DataBindingUtil;
 import android.support.annotation.NonNull;
@@ -7,10 +7,10 @@ import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
-import com.example.mnowak.cirriculumvitae.R;
-import com.example.mnowak.cirriculumvitae.databinding.ItemStudiesActivityBinding;
-import com.example.mnowak.cirriculumvitae.databinding.ViewCheckedEventBinding;
-import com.example.mnowak.cirriculumvitae.model.StudiesActivityViewModel;
+import com.mnowak.cirriculumvitae.R;
+import com.mnowak.cirriculumvitae.databinding.ItemStudiesActivityBinding;
+import com.mnowak.cirriculumvitae.databinding.ViewCheckedEventBinding;
+import com.mnowak.cirriculumvitae.model.StudiesActivityViewModel;
 
 import java.util.List;
 

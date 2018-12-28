@@ -1,4 +1,4 @@
-package com.example.mnowak.cirriculumvitae;
+package com.mnowak.cirriculumvitae;
 
 import org.junit.Test;
 

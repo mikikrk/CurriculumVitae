@@ -7,11 +7,11 @@
 
         <variable
             name="eventViewModel"
-            type="com.example.mnowak.cirriculumvitae.model.StudiesActivityViewModel.EventViewModel" />
+            type="com.mnowak.cirriculumvitae.model.StudiesActivityViewModel.EventViewModel" />
 
         <variable
             name="studiesViewModel"
-            type="com.example.mnowak.cirriculumvitae.model.StudiesActivityViewModel" />
+            type="com.mnowak.cirriculumvitae.model.StudiesActivityViewModel" />
     </data>
 
     <android.support.v7.widget.AppCompatCheckBox

@@ -1,4 +1,4 @@
-package com.example.mnowak.cirriculumvitae.feature.moreInfo;
+package com.mnowak.cirriculumvitae.feature.moreInfo;
 
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
@@ -8,12 +8,12 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
-import com.example.mnowak.cirriculumvitae.R;
-import com.example.mnowak.cirriculumvitae.databinding.ActivityMoreInfoBinding;
-import com.example.mnowak.cirriculumvitae.model.PersonalInfoViewModel;
-import com.example.mnowak.cirriculumvitae.feature.moreInfo.fragment.experience.ExperienceFragment;
-import com.example.mnowak.cirriculumvitae.feature.moreInfo.fragment.skills.SkillsFragment;
-import com.example.mnowak.cirriculumvitae.feature.moreInfo.fragment.studiesActivities.StudiesActivitiesFragment;
+import com.mnowak.cirriculumvitae.R;
+import com.mnowak.cirriculumvitae.databinding.ActivityMoreInfoBinding;
+import com.mnowak.cirriculumvitae.model.PersonalInfoViewModel;
+import com.mnowak.cirriculumvitae.feature.moreInfo.fragment.experience.ExperienceFragment;
+import com.mnowak.cirriculumvitae.feature.moreInfo.fragment.skills.SkillsFragment;
+import com.mnowak.cirriculumvitae.feature.moreInfo.fragment.studiesActivities.StudiesActivitiesFragment;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -3,15 +3,15 @@ import org.jetbrains.kotlin.config.KotlinCompilerVersion
 plugins {
     id("com.android.application")
     kotlin("android")
-    id("kotlin-android-extensions")
     kotlin("kapt")
+    id("kotlin-android-extensions")
 }
 
 android {
     compileSdkVersion(28)
     buildToolsVersion = "28.0.3"
     defaultConfig {
-        applicationId = "com.example.mnowak.cirriculumvitae"
+        applicationId = "com.mnowak.cirriculumvitae"
         minSdkVersion(21)
         targetSdkVersion(28)
         versionCode = 1
