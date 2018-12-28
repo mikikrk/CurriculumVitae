@@ -1,9 +1,9 @@
 package com.mnowak.cirriculumvitae.feature.moreInfo.fragment.skills;
 
 import android.content.Context;
-import android.support.annotation.Dimension;
-import android.support.annotation.NonNull;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.Dimension;
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import android.view.ViewTreeObserver;

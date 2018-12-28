@@ -1,10 +1,10 @@
 package com.mnowak.cirriculumvitae.feature.personal;
 
 import android.content.Intent;
-import android.databinding.DataBindingUtil;
+import androidx.databinding.DataBindingUtil;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.mnowak.cirriculumvitae.R;
 import com.mnowak.cirriculumvitae.databinding.ActivityPersonalDataBinding;

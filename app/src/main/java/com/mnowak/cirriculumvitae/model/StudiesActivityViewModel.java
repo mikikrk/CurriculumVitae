@@ -1,10 +1,10 @@
 package com.mnowak.cirriculumvitae.model;
 
 import android.content.res.Resources;
-import android.databinding.ObservableField;
+import androidx.databinding.ObservableField;
 import android.graphics.Typeface;
-import android.support.annotation.ColorInt;
-import android.support.annotation.NonNull;
+import androidx.annotation.ColorInt;
+import androidx.annotation.NonNull;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.Spanned;

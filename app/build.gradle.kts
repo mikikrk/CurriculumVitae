@@ -10,6 +10,7 @@ plugins {
 android {
     compileSdkVersion(28)
     buildToolsVersion = "28.0.3"
+
     defaultConfig {
         applicationId = "com.mnowak.cirriculumvitae"
         minSdkVersion(21)
@@ -18,6 +19,12 @@ android {
         versionName = "1.0"
         testInstrumentationRunner = "android.support.test.runner.AndroidJUnitRunner"
     }
+
+    compileOptions{
+        setSourceCompatibility(JavaVersion.VERSION_1_8)
+        setTargetCompatibility(JavaVersion.VERSION_1_8)
+    }
+
     buildTypes {
         getByName("release") {
             isMinifyEnabled = true
@@ -35,21 +42,20 @@ android {
 dependencies {
 
     testImplementation("junit:junit:4.12")
-    androidTestImplementation("com.android.support.test.espresso:espresso-core:2.2.2") {
-        exclude(group = "com.android.support", module = "support-annotations")
-    }
+    androidTestImplementation("com.android.support.test.espresso:espresso-core:3.0.2")
 
-    implementation("com.android.support:appcompat-v7:28.0.0")
-    implementation("com.android.support:design:28.0.0")
-    implementation("com.android.support:support-v4:28.0.0")
+    implementation("androidx.appcompat:appcompat:1.0.2")
+    implementation("androidx.legacy:legacy-support-v4:1.0.0")
+    implementation("com.google.android.material:material:1.0.0")
+    implementation("androidx.core:core-ktx:1.0.1")
+    kapt("androidx.databinding:databinding-compiler:3.2.1")
 
     //Kotlin
-    implementation(kotlin("stdlib-jdk7", KotlinCompilerVersion.VERSION))
+    implementation(kotlin("stdlib-jdk8", KotlinCompilerVersion.VERSION))
 
     //ButterKnife
-    implementation("com.jakewharton:butterknife:8.8.1")
-    annotationProcessor("com.jakewharton:butterknife-compiler:8.8.1")
-    kapt("com.jakewharton:butterknife-compiler:8.8.1")
+    implementation("com.jakewharton:butterknife:9.0.0-rc3")
+    kapt("com.jakewharton:butterknife-compiler:9.0.0-rc3")
 
     //GSON
     implementation("com.google.code.gson:gson:2.8.2")
@@ -59,7 +65,4 @@ dependencies {
 
     //Glide
     implementation("com.github.bumptech.glide:glide:4.6.1")
-}
-repositories {
-    mavenCentral()
 }

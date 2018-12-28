@@ -1,8 +1,8 @@
 package com.mnowak.cirriculumvitae.utils;
 
 import android.content.res.Resources;
-import android.databinding.BindingAdapter;
-import android.support.annotation.Dimension;
+import androidx.databinding.BindingAdapter;
+import androidx.annotation.Dimension;
 import android.view.View;
 import android.view.ViewGroup;
 
