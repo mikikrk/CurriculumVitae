@@ -8,7 +8,7 @@
 
         <variable
             name="viewModel"
-            type="com.mnowak.cirriculumvitae.model.StudiesActivityViewModel" />
+            type="com.mnowak.cirriculumvitae.data.model.StudiesActivity" />
     </data>
 
     <RelativeLayout
@@ -70,8 +70,8 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/llImportantEvents"
             android:layout_toEndOf="@id/ivIcon"
-            android:orientation="vertical"
-            android:visibility="@{viewModel.expanded ? View.VISIBLE : View.GONE}">
+            android:orientation="vertical">
+            <!-- TODO replace with new version android:visibility="@{viewModel.expanded ? View.VISIBLE : View.GONE}">-->
 
         </LinearLayout>
 
@@ -82,8 +82,8 @@
             android:layout_alignParentBottom="true"
             android:layout_marginEnd="@dimen/disable_activity_margin"
             android:layout_marginBottom="@dimen/disable_activity_margin"
-            android:background="@android:color/transparent"
-            android:onClick="@{() -> viewModel.toggleExpanded()}" />
+            android:background="@android:color/transparent"/>
+            <!-- TODO replace with new implementation android:onClick="@{() -> viewModel.toggleExpanded()}" />-->
 
         <ImageView
             android:layout_width="@dimen/more_events_width"
@@ -91,8 +91,8 @@
             android:layout_below="@id/llRedundantEvents"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:src="@drawable/ic_expand_more_blue"
-            android:visibility="@{(viewModel.importantEvents == 0 || viewModel.importantEvents > viewModel.events.size() || viewModel.expanded) ? View.GONE : View.VISIBLE}" />
+            android:src="@drawable/ic_expand_more_blue"/>
+            <!-- TODO replace with new implementation android:visibility="@{(viewModel.importantEvents == 0 || viewModel.importantEvents > viewModel.events.size() || viewModel.expanded) ? View.GONE : View.VISIBLE}" />-->
 
         <ImageView
             android:layout_width="@dimen/more_events_width"
@@ -100,8 +100,8 @@
             android:layout_below="@id/llRedundantEvents"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:src="@drawable/ic_expand_less_blue"
-            android:visibility="@{viewModel.expanded ? View.VISIBLE : View.GONE}" />
+            android:src="@drawable/ic_expand_less_blue"/>
+            <!-- TODO replace with new implementation android:visibility="@{viewModel.expanded ? View.VISIBLE : View.GONE}" />-->
 
     </RelativeLayout>
 </layout>

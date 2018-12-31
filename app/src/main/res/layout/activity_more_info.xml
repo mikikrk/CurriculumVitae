@@ -6,7 +6,7 @@
 
         <variable
             name="viewModel"
-            type="com.mnowak.cirriculumvitae.model.PersonalInfoViewModel" />
+            type="com.mnowak.cirriculumvitae.data.model.PersonalInfo" />
     </data>
 
     <LinearLayout

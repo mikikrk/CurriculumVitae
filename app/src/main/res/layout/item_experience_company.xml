@@ -6,7 +6,7 @@
 
         <variable
             name="viewModel"
-            type="com.mnowak.cirriculumvitae.model.CompanyViewModel" />
+            type="com.mnowak.cirriculumvitae.data.model.Company" />
 
         <variable
             name="dimensHelper"

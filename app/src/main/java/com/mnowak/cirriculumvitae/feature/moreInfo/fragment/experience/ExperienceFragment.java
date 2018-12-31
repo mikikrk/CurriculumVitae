@@ -11,7 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.mnowak.cirriculumvitae.R;
-import com.mnowak.cirriculumvitae.model.CompanyViewModel;
+import com.mnowak.cirriculumvitae.data.model.Company;
 
 import java.io.Serializable;
 import java.util.Arrays;
@@ -23,14 +23,14 @@ import butterknife.ButterKnife;
 public class ExperienceFragment extends Fragment {
     private static final String ARG_EXPERIENCE_MODEL = "experience_model";
 
-    private List<CompanyViewModel> experience;
+    private List<Company> experience;
 
     @BindView(R.id.rvCompanies)
     RecyclerView rvCompanies;
 
-    public static ExperienceFragment newInstance(List<CompanyViewModel> experience) {
+    public static ExperienceFragment newInstance(List<Company> experience) {
         Bundle args = new Bundle();
-        args.putSerializable(ARG_EXPERIENCE_MODEL, experience.toArray(new CompanyViewModel[]{}));
+        args.putSerializable(ARG_EXPERIENCE_MODEL, experience.toArray(new Company[]{}));
         ExperienceFragment fragment = new ExperienceFragment();
         fragment.setArguments(args);
         return fragment;
@@ -59,8 +59,8 @@ public class ExperienceFragment extends Fragment {
     private void readArguments() {
         if (getArguments() != null) {
             Serializable serializableExperience = getArguments().getSerializable(ARG_EXPERIENCE_MODEL);
-            if (serializableExperience instanceof CompanyViewModel[]) {
-                experience = Arrays.asList((CompanyViewModel[]) serializableExperience);
+            if (serializableExperience instanceof Company[]) {
+                experience = Arrays.asList((Company[]) serializableExperience);
             }
         }
     }

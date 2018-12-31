@@ -11,7 +11,7 @@ import android.widget.LinearLayout;
 
 import com.mnowak.cirriculumvitae.R;
 import com.mnowak.cirriculumvitae.databinding.ItemSkillsBinding;
-import com.mnowak.cirriculumvitae.model.SkillsViewModel;
+import com.mnowak.cirriculumvitae.data.model.SkillsSet;
 import com.mnowak.cirriculumvitae.widgets.SkillTextView;
 
 import java.util.ArrayList;
@@ -23,9 +23,9 @@ import java.util.List;
 public class SkillsRecyclerViewAdapter extends RecyclerView.Adapter<SkillsRecyclerViewAdapter.SkillsViewHolder> {
     
     private ItemSkillsBinding itemBinding;
-    private List<SkillsViewModel> skills;
+    private List<SkillsSet> skills;
 
-    SkillsRecyclerViewAdapter(List<SkillsViewModel> skills) {
+    SkillsRecyclerViewAdapter(List<SkillsSet> skills) {
         this.skills = skills;
     }
     
@@ -39,7 +39,7 @@ public class SkillsRecyclerViewAdapter extends RecyclerView.Adapter<SkillsRecycl
 
     @Override
     public void onBindViewHolder(@NonNull SkillsViewHolder holder, int position) {
-        SkillsViewModel studiesActivityViewModel = skills.get(position);
+        SkillsSet studiesActivityViewModel = skills.get(position);
         holder.bind(studiesActivityViewModel);
     }
 
@@ -63,7 +63,7 @@ public class SkillsRecyclerViewAdapter extends RecyclerView.Adapter<SkillsRecycl
         private @Dimension int skillsVerticalGap;
         private int maxWidth;
         private int boxPadding;
-        private SkillsViewModel skillsViewModel;
+        private SkillsSet skillsSet;
 
         public SkillsViewHolder(ItemSkillsBinding itemBinding) {
             super(itemBinding.getRoot());
@@ -87,27 +87,27 @@ public class SkillsRecyclerViewAdapter extends RecyclerView.Adapter<SkillsRecycl
                 if (llSkills.getWidth() > 0) {
                     llSkills.getViewTreeObserver().removeOnGlobalLayoutListener(this);
                     maxWidth = llSkills.getWidth() - 2 * boxPadding;
-                    if (skillsViewModel != null) {
-                        bind(skillsViewModel);
+                    if (skillsSet != null) {
+                        bind(skillsSet);
                     }
                 }
             }
         };
 
-        public void bind(SkillsViewModel skillsViewModel) {
-            this.skillsViewModel = skillsViewModel;
+        public void bind(SkillsSet skillsSet) {
+            this.skillsSet = skillsSet;
             if (maxWidth > 0) {
-                addSkills(skillsViewModel);
-                itemBinding.setViewModel(skillsViewModel);
+                addSkills(skillsSet);
+                itemBinding.setViewModel(skillsSet);
                 itemBinding.executePendingBindings();
             }
         }
 
-        private void addSkills(SkillsViewModel skillsViewModel) {
+        private void addSkills(SkillsSet skillsSet) {
             LinkedList<SkillTextView> skillViews = new LinkedList<>();
-            addSkills(skillViews, skillsViewModel.goodLevelSkills, SkillTextView.LevelColor.GOOD);
-            addSkills(skillViews, skillsViewModel.mediumLevelSkills, SkillTextView.LevelColor.MEDIUM);
-            addSkills(skillViews, skillsViewModel.lowLevelSkills, SkillTextView.LevelColor.LOW);
+            addSkills(skillViews, skillsSet.getGoodLevelSkills(), SkillTextView.LevelColor.GOOD);
+            addSkills(skillViews, skillsSet.getMediumLevelSkills(), SkillTextView.LevelColor.MEDIUM);
+            addSkills(skillViews, skillsSet.getLowLevelSkills(), SkillTextView.LevelColor.LOW);
             appendSkillsToLayout(skillViews);
         }
 
@@ -168,24 +168,24 @@ public class SkillsRecyclerViewAdapter extends RecyclerView.Adapter<SkillsRecycl
         }
 
 
-//        private void addEvents(SkillsViewModel skillsViewModel) {
-//            for (int i = 0; i < skillsViewModel.events.size(); i++) {
-//                SkillsViewModel.EventViewModel eventViewModel = skillsViewModel.events.get(i);
+//        private void addEvents(SkillsSet skillsSet) {
+//            for (int i = 0; i < skillsSet.events.size(); i++) {
+//                SkillsSet.Event eventViewModel = skillsSet.events.get(i);
 //                eventViewModel.prepare(itemView);
-//                LinearLayout linearLayout = chooseGroupForEvent(skillsViewModel, i);
-//                bindView(skillsViewModel, eventViewModel, linearLayout);
+//                LinearLayout linearLayout = chooseGroupForEvent(skillsSet, i);
+//                bindView(skillsSet, eventViewModel, linearLayout);
 //            }
 //        }
 //
-//        private void bindView(SkillsViewModel skillsViewModel, SkillsViewModel.EventViewModel eventViewModel, LinearLayout linearLayout) {
+//        private void bindView(SkillsSet skillsSet, SkillsSet.Event eventViewModel, LinearLayout linearLayout) {
 //            ViewCheckedEventBinding viewCheckedEventBinding = DataBindingUtil.inflate(layoutInflater, R.layout.view_checked_event, linearLayout, true);
-//            viewCheckedEventBinding.setStudiesViewModel(skillsViewModel);
+//            viewCheckedEventBinding.setStudiesViewModel(skillsSet);
 //            viewCheckedEventBinding.setEventViewModel(eventViewModel);
 //            viewCheckedEventBinding.executePendingBindings();
 //        }
 //
-//        private LinearLayout chooseGroupForEvent(SkillsViewModel skillsViewModel, int position) {
-//            if (skillsViewModel.importantEvents > 0 && position >= skillsViewModel.importantEvents) {
+//        private LinearLayout chooseGroupForEvent(SkillsSet skillsSet, int position) {
+//            if (skillsSet.importantEvents > 0 && position >= skillsSet.importantEvents) {
 //                return llRedundantEvents;
 //            } else {
 //                return llImportantEvents;
@@ -194,7 +194,7 @@ public class SkillsRecyclerViewAdapter extends RecyclerView.Adapter<SkillsRecycl
 //
         public void clear() {
             llSkills.removeAllViews();
-            skillsViewModel = null;
+            skillsSet = null;
         }
     }
 }

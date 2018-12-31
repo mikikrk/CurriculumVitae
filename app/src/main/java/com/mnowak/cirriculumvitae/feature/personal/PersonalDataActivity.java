@@ -1,17 +1,20 @@
 package com.mnowak.cirriculumvitae.feature.personal;
 
 import android.content.Intent;
+
 import androidx.databinding.DataBindingUtil;
+
 import android.os.Bundle;
+
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.mnowak.cirriculumvitae.R;
-import com.mnowak.cirriculumvitae.databinding.ActivityPersonalDataBinding;
-import com.mnowak.cirriculumvitae.feature.moreInfo.MoreInfoActivity;
-import com.mnowak.cirriculumvitae.model.PersonalInfoViewModel;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.mnowak.cirriculumvitae.R;
+import com.mnowak.cirriculumvitae.data.model.Candidate;
+import com.mnowak.cirriculumvitae.databinding.ActivityPersonalDataBinding;
+import com.mnowak.cirriculumvitae.feature.moreInfo.MoreInfoActivity;
 
 import java.io.BufferedReader;
 import java.io.InputStream;
@@ -22,7 +25,7 @@ import butterknife.OnClick;
 
 public class PersonalDataActivity extends AppCompatActivity {
 
-    private PersonalInfoViewModel personalInfoViewModel;
+    private Candidate candidate;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -32,8 +35,8 @@ public class PersonalDataActivity extends AppCompatActivity {
         Gson gson = new GsonBuilder().create();
         InputStream rawStream = getResources().openRawResource(R.raw.personal_info);
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(rawStream));
-        personalInfoViewModel = gson.fromJson(bufferedReader, PersonalInfoViewModel.class);
-        binding.setViewModel(personalInfoViewModel);
+        candidate = gson.fromJson(bufferedReader, Candidate.class);
+        binding.setViewModel(candidate);
         ButterKnife.bind(this);
     }
 
@@ -41,7 +44,7 @@ public class PersonalDataActivity extends AppCompatActivity {
     public void onMoreInfoClicked() {
         Intent intent = new Intent(this, MoreInfoActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
-        intent.putExtra(MoreInfoActivity.PERSONAL_INFO_EXTRA, personalInfoViewModel);
+        intent.putExtra(MoreInfoActivity.PERSONAL_INFO_EXTRA, candidate);
         startActivity(intent);
     }
 

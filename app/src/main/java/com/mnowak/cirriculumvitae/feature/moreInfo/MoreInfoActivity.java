@@ -9,11 +9,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.view.MenuItem;
 
 import com.mnowak.cirriculumvitae.R;
+import com.mnowak.cirriculumvitae.data.model.Candidate;
 import com.mnowak.cirriculumvitae.databinding.ActivityMoreInfoBinding;
-import com.mnowak.cirriculumvitae.model.PersonalInfoViewModel;
 import com.mnowak.cirriculumvitae.feature.moreInfo.fragment.experience.ExperienceFragment;
 import com.mnowak.cirriculumvitae.feature.moreInfo.fragment.skills.SkillsFragment;
 import com.mnowak.cirriculumvitae.feature.moreInfo.fragment.studiesActivities.StudiesActivitiesFragment;
+import com.mnowak.cirriculumvitae.feature.personal.PersonalInfoViewModel;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,7 +30,7 @@ public class MoreInfoActivity extends AppCompatActivity {
     private static final int STUDIES_PAGE = 1;
     private static final int SKILLS_PAGE = 2;
     private static final int[] TITLES_IDS = {R.string.more_info_title_experience, R.string.more_info_title_studies, R.string.more_info_title_skills};
-    private PersonalInfoViewModel personalInfoViewModel;
+    private Candidate candidate;
 
     @BindView(R.id.vpContent)
     ViewPager vpContent;
@@ -37,18 +38,10 @@ public class MoreInfoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         ActivityMoreInfoBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_more_info);
-        retrieveDataFromIntent();
-        binding.setViewModel(personalInfoViewModel);
+        binding.setViewModel(candidate);
         ButterKnife.bind(this);
         initActionBar();
         prepareViewPager();
-    }
-
-    private void retrieveDataFromIntent() {
-        Bundle extras = getIntent().getExtras();
-        if (extras != null && !extras.isEmpty()) {
-            personalInfoViewModel = (PersonalInfoViewModel) extras.getSerializable(PERSONAL_INFO_EXTRA);
-        }
     }
 
     private void initActionBar() {
@@ -95,9 +88,9 @@ public class MoreInfoActivity extends AppCompatActivity {
 
     public List<Fragment> getUsedPages() {
         List<Fragment> screens = new ArrayList<>();
-        screens.add(ExperienceFragment.newInstance(personalInfoViewModel.experience));
-        screens.add(StudiesActivitiesFragment.newInstance(personalInfoViewModel.activities));
-        screens.add(SkillsFragment.newInstance(personalInfoViewModel.skills));
+        screens.add(ExperienceFragment.newInstance(candidate.getExperience()));
+        screens.add(StudiesActivitiesFragment.newInstance(candidate.getActivities()));
+        screens.add(SkillsFragment.newInstance(candidate.getSkills()));
         return screens;
     }
 }

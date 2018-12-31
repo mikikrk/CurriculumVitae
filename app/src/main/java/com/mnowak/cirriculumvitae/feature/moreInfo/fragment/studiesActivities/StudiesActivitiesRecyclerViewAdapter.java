@@ -10,17 +10,17 @@ import android.widget.LinearLayout;
 import com.mnowak.cirriculumvitae.R;
 import com.mnowak.cirriculumvitae.databinding.ItemStudiesActivityBinding;
 import com.mnowak.cirriculumvitae.databinding.ViewCheckedEventBinding;
-import com.mnowak.cirriculumvitae.model.StudiesActivityViewModel;
+import com.mnowak.cirriculumvitae.data.model.StudiesActivity;
 
 import java.util.List;
 
 public class StudiesActivitiesRecyclerViewAdapter extends RecyclerView.Adapter<StudiesActivitiesRecyclerViewAdapter.ActivityViewHolder> {
 
-    private List<StudiesActivityViewModel> studiesActivityViewModels;
+    private List<StudiesActivity> studiesActivity;
     private ItemStudiesActivityBinding itemBinding;
 
-    StudiesActivitiesRecyclerViewAdapter(List<StudiesActivityViewModel> studiesActivityViewModels) {
-        this.studiesActivityViewModels = studiesActivityViewModels;
+    StudiesActivitiesRecyclerViewAdapter(List<StudiesActivity> studiesActivity) {
+        this.studiesActivity = studiesActivity;
     }
 
     @NonNull
@@ -33,13 +33,13 @@ public class StudiesActivitiesRecyclerViewAdapter extends RecyclerView.Adapter<S
 
     @Override
     public void onBindViewHolder(@NonNull ActivityViewHolder holder, int position) {
-        StudiesActivityViewModel studiesActivityViewModel = studiesActivityViewModels.get(position);
-        holder.bind(studiesActivityViewModel);
+        StudiesActivity studiesActivity = this.studiesActivity.get(position);
+        holder.bind(studiesActivity);
     }
 
     @Override
     public int getItemCount() {
-        return studiesActivityViewModels.size();
+        return studiesActivity.size();
     }
 
     @Override
@@ -63,30 +63,30 @@ public class StudiesActivitiesRecyclerViewAdapter extends RecyclerView.Adapter<S
             layoutInflater = LayoutInflater.from(itemView.getContext());
         }
 
-        public void bind(StudiesActivityViewModel studiesActivitiesViewModel) {
+        public void bind(StudiesActivity studiesActivitiesViewModel) {
             addEvents(studiesActivitiesViewModel);
             itemBinding.setViewModel(studiesActivitiesViewModel);
             itemBinding.executePendingBindings();
         }
 
-        private void addEvents(StudiesActivityViewModel studiesActivitiesViewModel) {
-            for (int i = 0; i < studiesActivitiesViewModel.events.size(); i++) {
-                StudiesActivityViewModel.EventViewModel eventViewModel = studiesActivitiesViewModel.events.get(i);
-                eventViewModel.prepare(itemView);
+        private void addEvents(StudiesActivity studiesActivitiesViewModel) {
+            for (int i = 0; i < studiesActivitiesViewModel.getEvents().size(); i++) {
+                StudiesActivity.Event event = studiesActivitiesViewModel.getEvents().get(i);
+                //TODO prepare view
                 LinearLayout linearLayout = chooseGroupForEvent(studiesActivitiesViewModel, i);
-                bindView(studiesActivitiesViewModel, eventViewModel, linearLayout);
+                bindView(studiesActivitiesViewModel, event, linearLayout);
             }
         }
 
-        private void bindView(StudiesActivityViewModel studiesActivitiesViewModel, StudiesActivityViewModel.EventViewModel eventViewModel, LinearLayout linearLayout) {
+        private void bindView(StudiesActivity studiesActivitiesViewModel, StudiesActivity.Event event, LinearLayout linearLayout) {
             ViewCheckedEventBinding viewCheckedEventBinding = DataBindingUtil.inflate(layoutInflater, R.layout.view_checked_event, linearLayout, true);
             viewCheckedEventBinding.setStudiesViewModel(studiesActivitiesViewModel);
-            viewCheckedEventBinding.setEventViewModel(eventViewModel);
+            viewCheckedEventBinding.setEventViewModel(event);
             viewCheckedEventBinding.executePendingBindings();
         }
 
-        private LinearLayout chooseGroupForEvent(StudiesActivityViewModel studiesActivitiesViewModel, int position) {
-            if (studiesActivitiesViewModel.importantEvents > 0 && position >= studiesActivitiesViewModel.importantEvents) {
+        private LinearLayout chooseGroupForEvent(StudiesActivity studiesActivitiesViewModel, int position) {
+            if (studiesActivitiesViewModel.getImportantEvents() > 0 && position >= studiesActivitiesViewModel.getImportantEvents()) {
                 return llRedundantEvents;
             } else {
                 return llImportantEvents;

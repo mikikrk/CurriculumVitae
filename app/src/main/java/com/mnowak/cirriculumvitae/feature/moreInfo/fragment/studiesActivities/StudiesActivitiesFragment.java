@@ -11,7 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.mnowak.cirriculumvitae.R;
-import com.mnowak.cirriculumvitae.model.StudiesActivityViewModel;
+import com.mnowak.cirriculumvitae.data.model.StudiesActivity;
 
 import java.io.Serializable;
 import java.util.Arrays;
@@ -25,11 +25,11 @@ public class StudiesActivitiesFragment extends Fragment {
     @BindView(R.id.recyclerView)
     RecyclerView recyclerView;
 
-    private List<StudiesActivityViewModel> studiesActivities;
+    private List<StudiesActivity> studiesActivities;
 
-    public static StudiesActivitiesFragment newInstance(List<StudiesActivityViewModel> studiesActivities) {
+    public static StudiesActivitiesFragment newInstance(List<StudiesActivity> studiesActivities) {
         Bundle args = new Bundle();
-        args.putSerializable(ARG_ACTIVITIES_MODEL, studiesActivities.toArray(new StudiesActivityViewModel[]{}));
+        args.putSerializable(ARG_ACTIVITIES_MODEL, studiesActivities.toArray(new StudiesActivity[]{}));
         StudiesActivitiesFragment fragment = new StudiesActivitiesFragment();
         fragment.setArguments(args);
         return fragment;
@@ -45,8 +45,8 @@ public class StudiesActivitiesFragment extends Fragment {
     private void readArguments() {
         if (getArguments() != null) {
             Serializable serializableActivities = getArguments().getSerializable(ARG_ACTIVITIES_MODEL);
-            if (serializableActivities instanceof StudiesActivityViewModel[]) {
-                studiesActivities = Arrays.asList((StudiesActivityViewModel[]) serializableActivities);
+            if (serializableActivities instanceof StudiesActivity[]) {
+                studiesActivities = Arrays.asList((StudiesActivity[]) serializableActivities);
             }
         }
     }

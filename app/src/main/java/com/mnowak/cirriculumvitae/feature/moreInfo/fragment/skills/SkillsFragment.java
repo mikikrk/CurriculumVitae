@@ -11,7 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.mnowak.cirriculumvitae.R;
-import com.mnowak.cirriculumvitae.model.SkillsViewModel;
+import com.mnowak.cirriculumvitae.data.model.SkillsSet;
 
 import java.io.Serializable;
 import java.util.Arrays;
@@ -26,11 +26,11 @@ public class SkillsFragment extends Fragment {
     @BindView(R.id.recyclerView)
     RecyclerView recyclerView;
 
-    private List<SkillsViewModel> skills;
+    private List<SkillsSet> skills;
 
-    public static SkillsFragment newInstance(List<SkillsViewModel> skills) {
+    public static SkillsFragment newInstance(List<SkillsSet> skills) {
         Bundle args = new Bundle();
-        args.putSerializable(ARG_SKILLS_MODEL, skills.toArray(new SkillsViewModel[]{}));
+        args.putSerializable(ARG_SKILLS_MODEL, skills.toArray(new SkillsSet[]{}));
         SkillsFragment fragment = new SkillsFragment();
         fragment.setArguments(args);
         return fragment;
@@ -46,8 +46,8 @@ public class SkillsFragment extends Fragment {
     private void readArguments() {
         if (getArguments() != null) {
             Serializable serializableActivities = getArguments().getSerializable(ARG_SKILLS_MODEL);
-            if (serializableActivities instanceof SkillsViewModel[]) {
-                skills = Arrays.asList((SkillsViewModel[]) serializableActivities);
+            if (serializableActivities instanceof SkillsSet[]) {
+                skills = Arrays.asList((SkillsSet[]) serializableActivities);
             }
         }
     }
