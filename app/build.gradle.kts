@@ -53,6 +53,12 @@ dependencies {
     //Kotlin
     implementation(kotlin("stdlib-jdk8", KotlinCompilerVersion.VERSION))
 
+    //Dagger
+    implementation("com.google.dagger:dagger-android:2.15")
+    implementation("com.google.dagger:dagger-android-support:2.13")
+    kapt("com.google.dagger:dagger-android-processor:2.16")
+    kapt("com.google.dagger:dagger-compiler:2.13")
+
     //ButterKnife
     implementation("com.jakewharton:butterknife:9.0.0-rc3")
     kapt("com.jakewharton:butterknife-compiler:9.0.0-rc3")
