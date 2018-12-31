@@ -13,7 +13,7 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
         <activity
-            android:name="com.mnowak.cirriculumvitae.feature.personal.PersonalDataActivity"
+            android:name="com.mnowak.cirriculumvitae.feature.personal.PersonalInfoActivity"
             android:label="@string/android_developers"
             android:screenOrientation="portrait">
             <intent-filter>

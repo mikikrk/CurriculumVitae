@@ -3,6 +3,7 @@ package com.mnowak.cirriculumvitae.di
 import android.app.Application
 import com.mnowak.cirriculumvitae.CirriculumVitaeApplication
 import com.mnowak.cirriculumvitae.di.data.DataModule
+import com.mnowak.cirriculumvitae.di.view.ContributeModule
 import com.mnowak.cirriculumvitae.di.viewModel.ViewModelsModule
 import dagger.BindsInstance
 import dagger.Component
@@ -15,6 +16,7 @@ import javax.inject.Singleton
 @Component(modules = [
     AndroidSupportInjectionModule::class,
     DataModule::class,
+    ContributeModule::class,
     ViewModelsModule::class
 ])
 interface ApplicationComponent : AndroidInjector<DaggerApplication> {

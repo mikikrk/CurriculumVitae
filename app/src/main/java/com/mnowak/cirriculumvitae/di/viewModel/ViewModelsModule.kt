@@ -1,7 +1,9 @@
 package com.mnowak.cirriculumvitae.di.viewModel
 
+import androidx.lifecycle.ViewModel
 import com.mnowak.cirriculumvitae.feature.personal.PersonalInfoRepository
 import com.mnowak.cirriculumvitae.feature.personal.PersonalInfoViewModel
+import com.mnowak.cirriculumvitae.feature.personal.PersonalInfoViewModelImpl
 import dagger.Module
 import dagger.Provides
 import dagger.multibindings.IntoMap
@@ -9,8 +11,8 @@ import dagger.multibindings.IntoMap
 @Module
 class ViewModelsModule {
 
-        @Provides
-        @IntoMap
-        @ViewModelKey(PersonalInfoViewModel::class)
-        fun providePersonalInfoVM(repository: PersonalInfoRepository) = PersonalInfoViewModel(repository)
+    @Provides
+    @IntoMap
+    @ViewModelKey(PersonalInfoViewModel::class)
+    fun providePersonalInfoVM(repository: PersonalInfoRepository): ViewModel = PersonalInfoViewModelImpl(repository)
 }

@@ -5,7 +5,7 @@
 
         <variable
             name="viewModel"
-            type="com.mnowak.cirriculumvitae.data.model.PersonalInfo" />
+            type="com.mnowak.cirriculumvitae.feature.personal.PersonalInfoViewModel" />
     </data>
 
     <RelativeLayout

@@ -3,9 +3,12 @@ package com.mnowak.cirriculumvitae.di.viewModel
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import dagger.multibindings.IntoMap
+import javax.inject.Inject
 import javax.inject.Provider
+import javax.inject.Singleton
 
-class ViewModelFactory(
+@Singleton
+class ViewModelFactory @Inject constructor(
 
         private val creators: Map<Class<out ViewModel>, @JvmSuppressWildcards Provider<ViewModel>>
 
