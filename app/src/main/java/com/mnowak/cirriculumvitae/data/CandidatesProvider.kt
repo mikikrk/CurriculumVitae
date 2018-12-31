@@ -31,19 +31,19 @@ class CandidatesProvider @Inject constructor(
         }
     }
 
-    private val personalInfo: PersonalInfo by lazy {
+    val personalInfo: PersonalInfo by lazy {
         candidate
     }
 
-    private val experience: List<CandidateJob> by lazy {
+    val experience: List<CandidateJob> by lazy {
         candidate.experience
     }
 
-    private val studiesActivities: List<StudiesActivity> by lazy {
+    val studiesActivities: List<StudiesActivity> by lazy {
         candidate.activities
     }
 
-    private val skills: List<SkillsSet> by lazy {
+    val skills: List<SkillsSet> by lazy {
         candidate.skills
     }
 }
