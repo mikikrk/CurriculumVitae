@@ -10,7 +10,7 @@ data class Candidate(
         override val email: String,
         override val location: String,
         override val photoUri: String,
-        val experience: List<Company>,
+        val experience: List<CandidateJob>,
         val activities: List<StudiesActivity>,
         val skills: List<SkillsSet>
 ) : PersonalInfo, Serializable

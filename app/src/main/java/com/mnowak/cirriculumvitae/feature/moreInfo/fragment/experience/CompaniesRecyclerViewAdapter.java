@@ -7,17 +7,17 @@ import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
 import com.mnowak.cirriculumvitae.databinding.ItemExperienceCompanyBinding;
-import com.mnowak.cirriculumvitae.data.model.Company;
+import com.mnowak.cirriculumvitae.data.model.CandidateJob;
 import com.mnowak.cirriculumvitae.utils.ExperienceDimensHelper;
 
 import java.util.List;
 
 public class CompaniesRecyclerViewAdapter extends RecyclerView.Adapter<CompaniesRecyclerViewAdapter.CompanyViewHolder> {
 
-    private List<Company> companies;
+    private List<CandidateJob> companies;
     private ExperienceDimensHelper experienceDimensHelper;
 
-    CompaniesRecyclerViewAdapter(List<Company> companies, Context context) {
+    CompaniesRecyclerViewAdapter(List<CandidateJob> companies, Context context) {
         this.companies = companies;
         experienceDimensHelper = new ExperienceDimensHelper(context.getResources());
     }
@@ -32,8 +32,8 @@ public class CompaniesRecyclerViewAdapter extends RecyclerView.Adapter<Companies
 
     @Override
     public void onBindViewHolder(@NonNull CompanyViewHolder holder, int position) {
-        Company company = companies.get(position);
-        holder.bind(company);
+        CandidateJob candidateJob = companies.get(position);
+        holder.bind(candidateJob);
     }
 
     @Override
@@ -49,8 +49,8 @@ public class CompaniesRecyclerViewAdapter extends RecyclerView.Adapter<Companies
             this.itemBinding = itemBinding;
         }
 
-        public void bind(Company company) {
-            itemBinding.setViewModel(company);
+        public void bind(CandidateJob candidateJob) {
+            itemBinding.setViewModel(candidateJob);
             itemBinding.setDimensHelper(experienceDimensHelper);
             itemBinding.executePendingBindings();
         }
