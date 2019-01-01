@@ -2,47 +2,61 @@ package com.mnowak.cirriculumvitae.feature.moreInfo
 
 import android.os.Bundle
 import android.view.MenuItem
-import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
-import androidx.viewpager.widget.ViewPager
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProviders
 import com.mnowak.cirriculumvitae.R
 import com.mnowak.cirriculumvitae.databinding.ActivityMoreInfoBinding
+import com.mnowak.cirriculumvitae.di.viewModel.ViewModelFactory
 import com.mnowak.cirriculumvitae.feature.moreInfo.fragment.experience.ExperienceFragment
 import com.mnowak.cirriculumvitae.feature.moreInfo.fragment.skills.SkillsFragment
 import com.mnowak.cirriculumvitae.feature.moreInfo.fragment.studiesActivities.StudiesActivitiesFragment
+import com.mnowak.cirriculumvitae.utils.onPageChanged
+import dagger.android.support.DaggerAppCompatActivity
 import kotlinx.android.synthetic.main.activity_more_info.*
+import javax.inject.Inject
 
-class MoreInfoActivity : AppCompatActivity() {
+class MoreInfoActivity : DaggerAppCompatActivity() {
 
-    private val onPageChangeListener = object : ViewPager.OnPageChangeListener {
+    @Inject
+    lateinit var factory: ViewModelFactory
 
-        override fun onPageScrolled(position: Int, positionOffset: Float, positionOffsetPixels: Int) {}
-
-        override fun onPageSelected(position: Int) {
-            setTitle(TITLES_IDS[position])
-        }
-
-        override fun onPageScrollStateChanged(state: Int) {
-        }
+    private val viewModel: MoreInfoViewModel by lazy {
+        ViewModelProviders.of(this, factory).get(MoreInfoViewModel::class.java)
     }
 
-    private val usedPages = listOf(ExperienceFragment.newInstance(),
+    private val screens = listOf(ExperienceFragment.newInstance(),
             StudiesActivitiesFragment.newInstance(),
             SkillsFragment.newInstance())
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val binding = DataBindingUtil.setContentView<ActivityMoreInfoBinding>(this, R.layout.activity_more_info)
+        bindView()
         initActionBar()
         prepareViewPager()
+        observeTitle()
+    }
+
+    private fun bindView() {
+        val binding = DataBindingUtil.setContentView<ActivityMoreInfoBinding>(this, R.layout.activity_more_info)
+        binding.setLifecycleOwner(this)
+        binding.viewModel = viewModel
     }
 
     private fun initActionBar() {
-        val actionBar = supportActionBar
-        if (actionBar != null) {
-            actionBar.setDisplayHomeAsUpEnabled(true)
-            setTitle(TITLES_IDS[EXPERIENCE_PAGE])
-        }
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+    }
+
+    private fun prepareViewPager() {
+        val screenPagerAdapter = MoreInfoPagerAdapter(supportFragmentManager, screens)
+        vpContent.adapter = screenPagerAdapter
+        vpContent.onPageChanged(viewModel::onPageChanged)
+    }
+
+    private fun observeTitle() {
+        viewModel.activityTitle.observe(this, Observer {
+            supportActionBar?.setTitle(it)
+        })
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean =
@@ -53,19 +67,4 @@ class MoreInfoActivity : AppCompatActivity() {
                 }
                 else -> super.onOptionsItemSelected(item)
             }
-
-    private fun prepareViewPager() {
-        val screens = usedPages
-        val screenPagerAdapter = MoreInfoPagerAdapter(supportFragmentManager, screens)
-        vpContent.adapter = screenPagerAdapter
-        vpContent.addOnPageChangeListener(onPageChangeListener)
-    }
-
-    companion object {
-
-        private val EXPERIENCE_PAGE = 0
-        private val STUDIES_PAGE = 1
-        private val SKILLS_PAGE = 2
-        private val TITLES_IDS = intArrayOf(R.string.more_info_title_experience, R.string.more_info_title_studies, R.string.more_info_title_skills)
-    }
 }

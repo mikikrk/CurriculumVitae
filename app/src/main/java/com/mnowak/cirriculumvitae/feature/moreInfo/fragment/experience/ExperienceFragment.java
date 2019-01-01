@@ -28,12 +28,8 @@ public class ExperienceFragment extends Fragment {
     @BindView(R.id.rvCompanies)
     RecyclerView rvCompanies;
 
-    public static ExperienceFragment newInstance(List<CandidateJob> experience) {
-        Bundle args = new Bundle();
-        args.putSerializable(ARG_EXPERIENCE_MODEL, experience.toArray(new CandidateJob[]{}));
-        ExperienceFragment fragment = new ExperienceFragment();
-        fragment.setArguments(args);
-        return fragment;
+    public static ExperienceFragment newInstance() {
+        return new ExperienceFragment();
     }
 
     @Override

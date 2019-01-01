@@ -28,12 +28,8 @@ public class SkillsFragment extends Fragment {
 
     private List<SkillsSet> skills;
 
-    public static SkillsFragment newInstance(List<SkillsSet> skills) {
-        Bundle args = new Bundle();
-        args.putSerializable(ARG_SKILLS_MODEL, skills.toArray(new SkillsSet[]{}));
-        SkillsFragment fragment = new SkillsFragment();
-        fragment.setArguments(args);
-        return fragment;
+    public static SkillsFragment newInstance() {
+        return new SkillsFragment();
     }
 
 

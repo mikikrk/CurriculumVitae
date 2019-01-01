@@ -1,6 +1,6 @@
 package com.mnowak.cirriculumvitae.di.view
 
-import com.mnowak.cirriculumvitae.feature.personal.PersonalDataActivity
+import com.mnowak.cirriculumvitae.feature.personal.PersonalInfoActivity
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 
@@ -8,5 +8,5 @@ import dagger.android.ContributesAndroidInjector
 abstract class ContributeModule {
 
     @ContributesAndroidInjector
-    abstract fun contributePersonalDataActivity(): PersonalDataActivity
+    abstract fun contributePersonalDataActivity(): PersonalInfoActivity
 }

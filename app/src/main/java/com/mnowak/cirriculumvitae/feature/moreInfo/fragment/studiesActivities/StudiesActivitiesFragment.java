@@ -27,12 +27,8 @@ public class StudiesActivitiesFragment extends Fragment {
 
     private List<StudiesActivity> studiesActivities;
 
-    public static StudiesActivitiesFragment newInstance(List<StudiesActivity> studiesActivities) {
-        Bundle args = new Bundle();
-        args.putSerializable(ARG_ACTIVITIES_MODEL, studiesActivities.toArray(new StudiesActivity[]{}));
-        StudiesActivitiesFragment fragment = new StudiesActivitiesFragment();
-        fragment.setArguments(args);
-        return fragment;
+    public static StudiesActivitiesFragment newInstance() {
+        return new StudiesActivitiesFragment();
     }
 
 
