@@ -8,19 +8,10 @@ import android.view.ViewGroup
 
 import com.mnowak.cirriculumvitae.R
 
-class ExperienceDimensHelper(private val resources: Resources) {
-
-    private val markerTopMargin: Int by lazy {
-        resources.getDimensionPixelSize(R.dimen.chronology_marker_top_margin)
-    }
-    private val markerSize: Int by lazy {
-        resources.getDimensionPixelSize(R.dimen.chronology_element_width)
-    }
-    private val trianglePointerSize: Int by lazy {
-        resources.getDimensionPixelSize(R.dimen.company_to_marker_triangle_pointer_size)
-    }
-
-    val trianglePointerMarginTop: Int by lazy {
-        markerTopMargin + markerSize / 2 - trianglePointerSize / 2
-    }
+@Dimension
+fun getExperiencePointerMarginTop(resources: Resources): Int {
+    val markerTopMargin = resources.getDimensionPixelSize(R.dimen.chronology_marker_top_margin)
+    val markerSize = resources.getDimensionPixelSize(R.dimen.chronology_element_width)
+    val trianglePointerSize = resources.getDimensionPixelSize(R.dimen.company_to_marker_triangle_pointer_size)
+    return markerTopMargin + markerSize / 2 - trianglePointerSize / 2
 }

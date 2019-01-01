@@ -1,4 +1,5 @@
 import org.jetbrains.kotlin.config.KotlinCompilerVersion
+import org.jetbrains.kotlin.gradle.internal.AndroidExtensionsExtension
 
 plugins {
     id("com.android.application")
@@ -18,6 +19,12 @@ android {
         versionCode = 1
         versionName = "1.0"
         testInstrumentationRunner = "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    androidExtensions {
+        configure(delegateClosureOf<AndroidExtensionsExtension> {
+            isExperimental = true
+        })
     }
 
     compileOptions {
@@ -55,10 +62,10 @@ dependencies {
     implementation(kotlin("stdlib-jdk8", KotlinCompilerVersion.VERSION))
 
     //Dagger
-    implementation("com.google.dagger:dagger-android:2.15")
-    implementation("com.google.dagger:dagger-android-support:2.14")
+    implementation("com.google.dagger:dagger-android:2.16")
+    implementation("com.google.dagger:dagger-android-support:2.16")
     kapt("com.google.dagger:dagger-android-processor:2.16")
-    kapt("com.google.dagger:dagger-compiler:2.14")
+    kapt("com.google.dagger:dagger-compiler:2.16")
 
     //ButterKnife
     implementation("com.jakewharton:butterknife:9.0.0-rc3")
@@ -71,5 +78,5 @@ dependencies {
     implementation("de.hdodenhof:circleimageview:2.1.0")
 
     //Glide
-    implementation("com.github.bumptech.glide:glide:4.6.1")
+    implementation("com.github.bumptech.glide:glide:4.8.0")
 }

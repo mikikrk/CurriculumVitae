@@ -6,11 +6,7 @@
 
         <variable
             name="viewModel"
-            type="com.mnowak.cirriculumvitae.data.model.CandidateJob" />
-
-        <variable
-            name="dimensHelper"
-            type="com.mnowak.cirriculumvitae.utils.ExperienceDimensHelper" />
+            type="com.mnowak.cirriculumvitae.feature.moreInfo.fragment.experience.list.ExperienceItemViewModel" />
     </data>
 
     <RelativeLayout
@@ -96,10 +92,8 @@
             android:layout_width="@dimen/company_to_marker_triangle_pointer_size"
             android:layout_height="@dimen/company_to_marker_triangle_pointer_size"
             android:layout_marginStart="@dimen/marker_to_triangle_gap"
-            android:layout_marginTop="@{dimensHelper.trianglePointerMarginTop}"
             android:layout_toEndOf="@id/vMarker"
             android:background="@drawable/triangle_left_white"
             android:elevation="2dp" />
-
     </RelativeLayout>
 </layout>

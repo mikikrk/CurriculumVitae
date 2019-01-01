@@ -4,13 +4,26 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
-import butterknife.ButterKnife
 import com.mnowak.cirriculumvitae.R
+import com.mnowak.cirriculumvitae.di.viewModel.ViewModelFactory
+import com.mnowak.cirriculumvitae.feature.moreInfo.fragment.experience.list.ExperienceAdapter
+import dagger.android.support.DaggerFragment
 import kotlinx.android.synthetic.main.fragment_experience.*
+import javax.inject.Inject
 
-class ExperienceFragment : Fragment() {
+class ExperienceFragment : DaggerFragment() {
+
+    @Inject
+    lateinit var viewModelFactory: ViewModelFactory
+
+    private val adapter = ExperienceAdapter(this)
+
+    private val viewModel: ExperienceViewModel by lazy {
+        ViewModelProviders.of(this, viewModelFactory).get(ExperienceViewModel::class.java)
+    }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
@@ -19,14 +32,19 @@ class ExperienceFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        ButterKnife.bind(this, view)
         setupRecyclerView()
+        observe()
     }
 
     private fun setupRecyclerView() {
         rvCompanies.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
-//        rvCompanies.adapter = ExperienceAdapter(experience, requireContext())
+        rvCompanies.adapter = adapter
+    }
+
+    private fun observe() {
+        viewModel.experience.observe(this, Observer {
+            adapter.submitList(it)
+        })
     }
 
     companion object {

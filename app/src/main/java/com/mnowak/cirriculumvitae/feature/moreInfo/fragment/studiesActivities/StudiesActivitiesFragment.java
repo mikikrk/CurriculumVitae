@@ -57,7 +57,7 @@ public class StudiesActivitiesFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         ButterKnife.bind(this, view);
-        recyclerView.setAdapter(new StudiesActivitiesRecyclerViewAdapter(studiesActivities));
+//        recyclerView.setAdapter(new StudiesActivitiesRecyclerViewAdapter(studiesActivities));
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
     }
 }
