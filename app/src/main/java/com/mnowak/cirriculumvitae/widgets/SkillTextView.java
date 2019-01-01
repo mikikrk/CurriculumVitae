@@ -8,12 +8,13 @@ import androidx.annotation.ColorInt;
 import androidx.annotation.ColorRes;
 import androidx.annotation.Dimension;
 import androidx.appcompat.widget.AppCompatTextView;
+import androidx.core.content.ContextCompat;
+
 import android.util.TypedValue;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
 import com.mnowak.cirriculumvitae.R;
-import com.mnowak.cirriculumvitae.utils.ResourcesUtils;
 
 public class SkillTextView extends AppCompatTextView {
 
@@ -43,9 +44,9 @@ public class SkillTextView extends AppCompatTextView {
         horizontalGap = resources.getDimensionPixelSize(R.dimen.skill_items_horizontal_gap);
         textSize = resources.getDimensionPixelSize(R.dimen.more_info_regular_text_size);
         backgroundDrawable = resources.getDrawable(R.drawable.genre_background, null);
-        backgroundColor = ResourcesUtils.getColor(resources, levelColor.getColor());
+        backgroundColor = ContextCompat.getColor(context, levelColor.getColor());
         backgroundDrawable.mutate().setColorFilter(backgroundColor, PorterDuff.Mode.MULTIPLY);
-        whiteColor = ResourcesUtils.getColor(resources, android.R.color.white);
+        whiteColor = ContextCompat.getColor(context, android.R.color.white);
     }
 
     private void setUp(String text) {

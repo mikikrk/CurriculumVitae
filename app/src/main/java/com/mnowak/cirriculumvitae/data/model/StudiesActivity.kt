@@ -1,6 +1,7 @@
 package com.mnowak.cirriculumvitae.data.model
 
 data class StudiesActivity(
+        val id: Int,
         val name: String,
         val description: String,
         val iconUri: String,
@@ -10,7 +11,7 @@ data class StudiesActivity(
 
     inner class Event(
             val name: String,
-            val description: String,
-            val function: String
+            val description: String?,
+            val function: String?
     )
 }

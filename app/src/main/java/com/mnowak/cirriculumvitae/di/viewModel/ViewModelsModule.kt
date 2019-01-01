@@ -7,6 +7,9 @@ import com.mnowak.cirriculumvitae.feature.moreInfo.MoreInfoViewModelImpl
 import com.mnowak.cirriculumvitae.feature.moreInfo.fragment.experience.ExperienceRepository
 import com.mnowak.cirriculumvitae.feature.moreInfo.fragment.experience.ExperienceViewModel
 import com.mnowak.cirriculumvitae.feature.moreInfo.fragment.experience.ExperienceViewModelImpl
+import com.mnowak.cirriculumvitae.feature.moreInfo.fragment.studiesActivities.StudiesActivitiesRepository
+import com.mnowak.cirriculumvitae.feature.moreInfo.fragment.studiesActivities.StudiesActivitiesViewModel
+import com.mnowak.cirriculumvitae.feature.moreInfo.fragment.studiesActivities.StudiesActivitiesViewModelImpl
 import com.mnowak.cirriculumvitae.feature.personal.PersonalInfoRepository
 import com.mnowak.cirriculumvitae.feature.personal.PersonalInfoViewModel
 import com.mnowak.cirriculumvitae.feature.personal.PersonalInfoViewModelImpl
@@ -31,4 +34,9 @@ class ViewModelsModule {
     @IntoMap
     @ViewModelKey(ExperienceViewModel::class)
     fun provideExperienceVM(repository: ExperienceRepository): ViewModel = ExperienceViewModelImpl(repository)
+
+    @Provides
+    @IntoMap
+    @ViewModelKey(StudiesActivitiesViewModel::class)
+    fun provideStudiesActivitiesVM(repository: StudiesActivitiesRepository): ViewModel = StudiesActivitiesViewModelImpl(repository)
 }

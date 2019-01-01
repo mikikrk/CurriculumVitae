@@ -2,7 +2,7 @@ package com.mnowak.cirriculumvitae.feature.moreInfo
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
-import com.bonfireit.liveDataTools.type.res.StringResLiveData
+import com.mnowak.cirriculumvitae.liveData.type.StringResLiveData
 import com.mnowak.cirriculumvitae.R
 import com.mnowak.cirriculumvitae.data.model.PersonalInfo
 import com.mnowak.cirriculumvitae.liveData.InitializedLiveData
