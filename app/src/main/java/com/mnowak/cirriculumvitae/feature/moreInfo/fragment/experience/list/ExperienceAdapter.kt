@@ -13,15 +13,6 @@ import com.mnowak.cirriculumvitae.utils.getExperiencePointerMarginTop
 import kotlinx.android.extensions.LayoutContainer
 import kotlinx.android.synthetic.main.item_experience_company.*
 
-private val DIFF_CALLBACK = object : DiffUtil.ItemCallback<ExperienceItemViewModel>() {
-
-    override fun areItemsTheSame(oldItem: ExperienceItemViewModel, newItem: ExperienceItemViewModel): Boolean =
-            oldItem.id.value == newItem.id.value
-
-    override fun areContentsTheSame(oldItem: ExperienceItemViewModel, newItem: ExperienceItemViewModel): Boolean =
-            oldItem == newItem
-}
-
 class ExperienceAdapter(
 
         private val lifecycleOwner: LifecycleOwner
@@ -62,4 +53,13 @@ class ExperienceAdapter(
             itemBinding.executePendingBindings()
         }
     }
+}
+
+private val DIFF_CALLBACK = object : DiffUtil.ItemCallback<ExperienceItemViewModel>() {
+
+    override fun areItemsTheSame(oldItem: ExperienceItemViewModel, newItem: ExperienceItemViewModel): Boolean =
+            oldItem.id.value == newItem.id.value
+
+    override fun areContentsTheSame(oldItem: ExperienceItemViewModel, newItem: ExperienceItemViewModel): Boolean =
+            oldItem == newItem
 }

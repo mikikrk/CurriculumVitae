@@ -7,7 +7,7 @@
 
         <variable
             name="viewModel"
-            type="com.mnowak.cirriculumvitae.data.model.SkillsSet" />
+            type="com.mnowak.cirriculumvitae.feature.moreInfo.fragment.skills.list.SkillsSetItemViewModel.SkillItemViewModel" />
     </data>
 
     <FrameLayout

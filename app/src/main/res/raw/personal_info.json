@@ -167,6 +167,7 @@
   ],
   "skills": [
     {
+      "id": 0,
       "label": "#technical skills",
       "labelColor": "#4990E2",
       "goodLevelSkills": [
@@ -197,6 +198,7 @@
       ]
     },
     {
+      "id": 1,
       "label": "#soft skills",
       "labelColor": "#5DB200",
       "goodLevelSkills": [
@@ -215,6 +217,7 @@
       ]
     },
     {
+      "id": 2,
       "label": "#interests",
       "labelColor": "#F64723",
       "mediumLevelSkills": [
