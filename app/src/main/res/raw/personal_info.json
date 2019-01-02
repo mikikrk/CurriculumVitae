@@ -184,8 +184,10 @@
       "mediumLevelSkills": [
         "Gradle",
         "Design Patterns",
-        "JavaRX",
+        "Retrofit",
+        "OkHttp3",
         "Dagger2",
+        "JavaRX",
         "SQL",
         "REST",
         "AndroidTv",
