@@ -13,7 +13,7 @@ android {
     buildToolsVersion = "28.0.3"
 
     defaultConfig {
-        applicationId = "com.mnowak.cirriculumvitae"
+        applicationId = "com.mnowak.curriculumvitae"
         minSdkVersion(21)
         targetSdkVersion(28)
         versionCode = 1

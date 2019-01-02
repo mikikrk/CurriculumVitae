@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.mnowak.cirriculumvitae">
+    package="com.mnowak.curriculumvitae">
 
     <application
-        android:name=".CirriculumVitaeApplication"
+        android:name="com.mnowak.curriculumvitae.CurriculumVitaeApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -13,7 +13,7 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
         <activity
-            android:name="com.mnowak.cirriculumvitae.feature.personal.PersonalInfoActivity"
+            android:name="com.mnowak.curriculumvitae.feature.personal.PersonalInfoActivity"
             android:label="@string/android_developers"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -22,7 +22,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.mnowak.cirriculumvitae.feature.moreInfo.MoreInfoActivity"
+            android:name="com.mnowak.curriculumvitae.feature.moreInfo.MoreInfoActivity"
             android:screenOrientation="portrait" />
     </application>
 

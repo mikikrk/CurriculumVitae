@@ -1,4 +1,4 @@
-package com.mnowak.cirriculumvitae;
+package com.mnowak.curriculumvitae;
 
 import org.junit.Test;
 
