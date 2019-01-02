@@ -17,6 +17,7 @@ import com.mnowak.cirriculumvitae.R
 class SkillTextView @JvmOverloads constructor(
 
         context: Context,
+        initialText: String? = null,
         attributeSet: AttributeSet? = null,
         defStyleAttr: Int = 0
 
@@ -41,9 +42,15 @@ class SkillTextView @JvmOverloads constructor(
         includeFontPadding = true
         setTextSize(TypedValue.COMPLEX_UNIT_PX, textSize.toFloat())
         setTextColor(whiteColor)
+        text = initialText
         background = backgroundDrawable
         textAlignment = View.TEXT_ALIGNMENT_CENTER
         maxLines = 1
+        measure(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT)
+    }
+
+    fun setSkill(skillName: String) {
+        text = skillName
         measure(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT)
     }
 

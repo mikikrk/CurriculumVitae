@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.mnowak.cirriculumvitae.R
 import com.mnowak.cirriculumvitae.di.viewModel.ViewModelFactory
 import com.mnowak.cirriculumvitae.feature.moreInfo.fragment.experience.list.ExperienceAdapter
@@ -37,7 +38,7 @@ class ExperienceFragment : DaggerFragment() {
     }
 
     private fun setupRecyclerView() {
-        rvCompanies.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
+        rvCompanies.layoutManager = LinearLayoutManager(context, RecyclerView.VERTICAL, false)
         rvCompanies.adapter = adapter
     }
 

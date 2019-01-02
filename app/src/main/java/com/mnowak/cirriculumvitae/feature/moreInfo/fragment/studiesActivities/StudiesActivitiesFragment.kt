@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.mnowak.cirriculumvitae.R
 import com.mnowak.cirriculumvitae.di.viewModel.ViewModelFactory
 import com.mnowak.cirriculumvitae.feature.moreInfo.fragment.studiesActivities.list.StudiesActivitiesAdapter
@@ -31,7 +32,7 @@ class StudiesActivitiesFragment : DaggerFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         recyclerView.adapter = adapter
-        recyclerView.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
+        recyclerView.layoutManager = LinearLayoutManager(context, RecyclerView.VERTICAL, false)
         observe()
     }
 

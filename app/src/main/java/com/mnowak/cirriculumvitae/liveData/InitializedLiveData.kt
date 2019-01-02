@@ -9,6 +9,6 @@ class InitializedLiveData<T>(
 ) : MutableLiveData<T>() {
 
     init {
-        postValue(initialValue)
+        value = initialValue
     }
 }

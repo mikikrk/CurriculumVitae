@@ -54,6 +54,7 @@
       "name": "Computer science",
       "description": "Electrical Engineering, Automatics, Computer Science and Biomedical Engineering",
       "iconUri": "file:///android_asset/ic_agh_blue.png",
+      "importantEvents": 2,
       "events": [
         {
           "name": "Engineering degree"

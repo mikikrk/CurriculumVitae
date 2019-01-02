@@ -99,7 +99,7 @@ class SkillsAdapter(
         }
 
         private fun prepareSkillTextView(skillItem: SkillsSetItemViewModel.SkillItemViewModel): SkillTextView {
-            val skillTextView = SkillTextView(context)
+            val skillTextView = SkillTextView(context, skillItem.name.value)
             val skillNameObserver = prepareSkillNameObserver(skillTextView)
             val skillsLevelObserver = prepareSkillLevelObserver(skillTextView)
             skillTextView.onAttachedToWindow = {
@@ -122,7 +122,7 @@ class SkillsAdapter(
         }
 
         private fun prepareSkillNameObserver(skillTextView: SkillTextView) =
-                Observer<String> { skillTextView.text = it }
+                Observer<String> { skillTextView.setSkill(it) }
 
         private fun prepareSkillLevelObserver(skillTextView: SkillTextView) = Observer<SkillsSetItemViewModel.SkillItemViewModel.SkillLevel> {
             val levelColor = getColorFromType(it)
@@ -149,11 +149,11 @@ class SkillsAdapter(
             val skillIterator = skillViews.iterator()
             val maxCheckAfterMaxReached = 3
             var checkedAfterMaxReached = 0
-            var measuredWidth = -skillsHorizontalGap * 2
+            var measuredWidth = -skillsHorizontalGap
             while (skillIterator.hasNext() && checkedAfterMaxReached < maxCheckAfterMaxReached) {
                 val skillTextView = skillIterator.next()
                 val newMeasuredWidth = measuredWidth + skillsHorizontalGap + skillTextView.measuredWidth
-                if (newMeasuredWidth < maxWidth) {
+                if (newMeasuredWidth <= maxWidth) {
                     oneLineViews.add(skillTextView)
                     skillIterator.remove()
                     measuredWidth = newMeasuredWidth
