@@ -8,6 +8,7 @@
   "photoUri": "file:///android_asset/mikolaj_nowak.png",
   "experience": [
     {
+      "id": 0,
       "name": "BonfireIT/SportsBroker",
       "employmentTime": "06.2017 - 01.2019",
       "position": "Lead Android Developer",
@@ -15,6 +16,7 @@
       "iconUri": "file:///android_asset/ic_android_kotlin.png"
     },
     {
+      "id": 1,
       "name": "ColorTv",
       "employmentTime": "01.2016 - 06.2017",
       "position": "Android Developer",
@@ -22,6 +24,7 @@
       "iconUri": "file:///android_asset/ic_android.png"
     },
     {
+      "id": 2,
       "name": "Comarch",
       "employmentTime": "07.2014 - 06.2015",
       "position": "Junior Java Developer",
@@ -29,6 +32,7 @@
       "iconUri": "file:///android_asset/ic_java.png"
     },
     {
+      "id": 3,
       "name": "City tour company",
       "employmentTime": "holidays 2011 - 2013",
       "position": "Guide as a Melex driver",
@@ -36,6 +40,7 @@
       "iconUri": "file:///android_asset/ic_melex.png"
     },
     {
+      "id": 4,
       "name": "Strzelnica Kraków",
       "employmentTime": "2014 - 2017",
       "position": "Shooting instructor",
@@ -45,9 +50,11 @@
   ],
   "activities": [
     {
+      "id": 0,
       "name": "Computer science",
       "description": "Electrical Engineering, Automatics, Computer Science and Biomedical Engineering",
       "iconUri": "file:///android_asset/ic_agh_blue.png",
+      "importantEvents": 2,
       "events": [
         {
           "name": "Engineering degree"
@@ -58,6 +65,7 @@
       ]
     },
     {
+      "id": 1,
       "name": "EESTEC AGH Kraków",
       "description": "Electronic Engineering Students’ European association",
       "iconUri": "file:///android_asset/ic_organization_blue.png",
@@ -108,6 +116,7 @@
       ]
     },
     {
+      "id": 2,
       "name": "Academical Sailing Club AGH",
       "description": "University sailing club",
       "iconUri": "file:///android_asset/ic_akz_blue.png",
@@ -133,6 +142,7 @@
       ]
     },
     {
+      "id": 3,
       "name": "Krakow Dragons - Quidditch Team",
       "description": "Muggle quidditch sport team",
       "iconUri": "file:///android_asset/ic_dragons_blue.png",
@@ -158,6 +168,7 @@
   ],
   "skills": [
     {
+      "id": 0,
       "label": "#technical skills",
       "labelColor": "#4990E2",
       "goodLevelSkills": [
@@ -173,8 +184,10 @@
       "mediumLevelSkills": [
         "Gradle",
         "Design Patterns",
-        "JavaRX",
+        "Retrofit",
+        "OkHttp3",
         "Dagger2",
+        "JavaRX",
         "SQL",
         "REST",
         "AndroidTv",
@@ -188,6 +201,7 @@
       ]
     },
     {
+      "id": 1,
       "label": "#soft skills",
       "labelColor": "#5DB200",
       "goodLevelSkills": [
@@ -206,6 +220,7 @@
       ]
     },
     {
+      "id": 2,
       "label": "#interests",
       "labelColor": "#F64723",
       "mediumLevelSkills": [

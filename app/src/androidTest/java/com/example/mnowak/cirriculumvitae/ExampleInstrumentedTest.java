@@ -1,4 +1,4 @@
-package com.mnowak.cirriculumvitae;
+package com.mnowak.curriculumvitae;
 
 import android.content.Context;
 import androidx.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.mnowak.cirriculumvitae", appContext.getPackageName());
+        assertEquals("com.mnowak.curriculumvitae", appContext.getPackageName());
     }
 }

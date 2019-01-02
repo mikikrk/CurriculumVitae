@@ -4,11 +4,9 @@
 
     <data>
 
-        <import type="android.view.View" />
-
         <variable
             name="viewModel"
-            type="com.mnowak.cirriculumvitae.model.StudiesActivityViewModel" />
+            type="com.mnowak.curriculumvitae.feature.moreInfo.fragment.studiesActivities.list.StudiesActivitiesItemViewModel" />
     </data>
 
     <RelativeLayout
@@ -61,7 +59,6 @@
             android:layout_below="@id/tvDescription"
             android:layout_toEndOf="@id/ivIcon"
             android:orientation="vertical">
-
         </LinearLayout>
 
         <LinearLayout
@@ -71,7 +68,7 @@
             android:layout_below="@id/llImportantEvents"
             android:layout_toEndOf="@id/ivIcon"
             android:orientation="vertical"
-            android:visibility="@{viewModel.expanded ? View.VISIBLE : View.GONE}">
+            android:visibility="@{viewModel.redundantEventsVisibility}">
 
         </LinearLayout>
 
@@ -91,17 +88,8 @@
             android:layout_below="@id/llRedundantEvents"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
+            android:rotation="@{viewModel.moreBtnRotation}"
             android:src="@drawable/ic_expand_more_blue"
-            android:visibility="@{(viewModel.importantEvents == 0 || viewModel.importantEvents > viewModel.events.size() || viewModel.expanded) ? View.GONE : View.VISIBLE}" />
-
-        <ImageView
-            android:layout_width="@dimen/more_events_width"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/llRedundantEvents"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:src="@drawable/ic_expand_less_blue"
-            android:visibility="@{viewModel.expanded ? View.VISIBLE : View.GONE}" />
-
+            android:visibility="@{viewModel.moreBtnVisibility}" />
     </RelativeLayout>
 </layout>

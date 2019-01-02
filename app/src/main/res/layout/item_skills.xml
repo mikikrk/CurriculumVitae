@@ -7,7 +7,7 @@
 
         <variable
             name="viewModel"
-            type="com.mnowak.cirriculumvitae.model.SkillsViewModel" />
+            type="com.mnowak.curriculumvitae.feature.moreInfo.fragment.skills.list.SkillsSetItemViewModel" />
     </data>
 
     <FrameLayout
@@ -47,11 +47,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/tvName"
-                android:orientation="vertical"
-                android:paddingStart="@dimen/data_box_padding"
-                android:paddingEnd="@dimen/data_box_padding"
-                android:paddingBottom="@dimen/data_box_padding" />
-
+                android:layout_marginStart="@dimen/data_box_padding"
+                android:layout_marginEnd="@dimen/data_box_padding"
+                android:layout_marginBottom="@dimen/data_box_padding"
+                android:orientation="vertical" />
         </RelativeLayout>
 
         <View
@@ -59,6 +58,6 @@
             android:layout_height="@dimen/skills_label_height"
             android:layout_gravity="top|end"
             android:layout_marginTop="@dimen/skill_items_vertical_gap"
-            android:background="@{Color.parseColor(viewModel.labelColor)}" />
+            android:background="@{viewModel.labelColor != null ? viewModel.labelColor : Color.WHITE}" />
     </FrameLayout>
 </layout>
