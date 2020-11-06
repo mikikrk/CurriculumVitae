@@ -9,6 +9,22 @@
   "experience": [
     {
       "id": 0,
+      "name": "WorldRemit",
+      "employmentTime": "07.2019 - Present",
+      "position": "Senior Android Developer",
+      "description": "Maintaining and extending calculation and transaction features of the Android application. Taking part in designing cross platform architectures. Building one of backend services. Temporally taking a role of a Team Leader.",
+      "iconUri": "file:///android_asset/ic_android_kotlin.png"
+    },
+    {
+      "id": 1,
+      "name": "Treeline",
+      "employmentTime": "02.2019 - 06.2019",
+      "position": "Android Developer",
+      "description": "Adjusting big entertainment park app for the new location.",
+      "iconUri": "file:///android_asset/ic_android_kotlin.png"
+    },
+    {
+      "id": 2,
       "name": "BonfireIT/SportsBroker",
       "employmentTime": "06.2017 - 01.2019",
       "position": "Lead Android Developer",
@@ -16,7 +32,7 @@
       "iconUri": "file:///android_asset/ic_android_kotlin.png"
     },
     {
-      "id": 1,
+      "id": 3,
       "name": "ColorTv",
       "employmentTime": "01.2016 - 06.2017",
       "position": "Android Developer",
@@ -24,7 +40,7 @@
       "iconUri": "file:///android_asset/ic_android.png"
     },
     {
-      "id": 2,
+      "id": 4,
       "name": "Comarch",
       "employmentTime": "07.2014 - 06.2015",
       "position": "Junior Java Developer",
@@ -32,7 +48,7 @@
       "iconUri": "file:///android_asset/ic_java.png"
     },
     {
-      "id": 3,
+      "id": 5,
       "name": "City tour company",
       "employmentTime": "holidays 2011 - 2013",
       "position": "Guide as a Melex driver",
@@ -40,7 +56,7 @@
       "iconUri": "file:///android_asset/ic_melex.png"
     },
     {
-      "id": 4,
+      "id": 6,
       "name": "Strzelnica Kraków",
       "employmentTime": "2014 - 2017",
       "position": "Shooting instructor",
@@ -175,29 +191,27 @@
         "Android",
         "Kotlin",
         "Java",
-        "Android Architecture Components",
-        "Firebase Realtime Database",
         "Clean code",
-        "Android Studio",
-        "Git"
+        "Clean architecture",
+        "Design Patterns",
+        "SOLID",
+        "Code Reviews",
+        "Git",
+        "Dagger2",
+        "Junit5",
+        "Mockito",
+        "Firebase Realtime Database"
       ],
       "mediumLevelSkills": [
+        "RxJava2",
+        "Android Architecture Components",
         "Gradle",
-        "Design Patterns",
         "Retrofit",
-        "OkHttp3",
-        "Dagger2",
-        "JavaRX",
-        "SQL",
-        "REST",
-        "AndroidTv",
-        "Google Cast",
-        "SDK Development",
-        "Image Processing"
+        "REST"
       ],
       "lowLevelSkills": [
-        "Javascript",
-        "UML"
+        "Spring WebFlux",
+        "JavaScript"
       ]
     },
     {
@@ -205,18 +219,17 @@
       "label": "#soft skills",
       "labelColor": "#5DB200",
       "goodLevelSkills": [
-        "Communication"
+        "Communication",
+        "Product analysis",
+        "Product building"
       ],
       "mediumLevelSkills": [
-        "Presentation",
         "Team management",
-        "Business etiquette",
-        "Time management",
+        "Project management",
         "Feedback",
+        "Presentation",
+        "Time management",
         "Team working"
-      ],
-      "lowLevelSkills": [
-        "Project management"
       ]
     },
     {
@@ -230,10 +243,9 @@
         "Board games",
         "Technologies",
         "Shooting",
-        "Muggle quidditch [sic!]",
         "Sport",
         "Talks",
-        "Beer brewing"
+        "Muggle quidditch [sic!]"
       ]
     }
   ]
