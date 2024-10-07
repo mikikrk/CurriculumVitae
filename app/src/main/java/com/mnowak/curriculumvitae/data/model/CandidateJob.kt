@@ -6,5 +6,6 @@ data class CandidateJob(
         val employmentTime: String,
         val position: String,
         val description: String,
-        val iconUri: String
+        val iconUri: String,
+        val display: Boolean
 )

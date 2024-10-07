@@ -2,20 +2,22 @@
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="personal_data_padding">16dp</dimen>
 
-    <dimen name="header_text_size">32sp</dimen>
-    <dimen name="subheader_text_size">14sp</dimen>
-    <dimen name="regular_text_size">18sp</dimen>
+    <dimen name="header_text_size">48sp</dimen>
+    <dimen name="subheader_text_size">28sp</dimen>
+    <dimen name="regular_text_size">22sp</dimen>
 
+    <dimen name="more_info_name_text_size">32sp</dimen>
+    <dimen name="more_info_position_text_size">14sp</dimen>
     <dimen name="more_info_header_text_size">18sp</dimen>
     <dimen name="more_info_redundant_header_text_size">10sp</dimen>
     <dimen name="more_info_regular_text_size">12sp</dimen>
 
     <dimen name="experience_additional_vertical_padding">12dp</dimen>
 
-    <dimen name="more_info_content_gap">12dp</dimen>
+    <dimen name="more_info_content_gap">16dp</dimen>
     <dimen name="fields_gap">8dp</dimen>
 
-    <dimen name="iconed_text_view_height">24sp</dimen>
+    <dimen name="iconed_text_view_height">32sp</dimen>
     <dimen name="iconed_text_view_gap">16dp</dimen>
     <dimen name="iconed_image_view_width">24dp</dimen>
 
@@ -41,11 +43,11 @@
     <dimen name="more_events_width">18dp</dimen>
     <dimen name="clickable_more_info_area">50dp</dimen>
 
-    <dimen name="skill_items_vertical_gap">8dp</dimen>
-    <dimen name="skill_items_horizontal_gap">4dp</dimen>
-    <dimen name="skill_item_horizontal_padding">7dp</dimen>
+    <dimen name="skill_items_vertical_gap">10dp</dimen>
+    <dimen name="skill_items_horizontal_gap">8dp</dimen>
+    <dimen name="skill_item_horizontal_padding">12dp</dimen>
     <dimen name="skill_item_vertical_padding">2dp</dimen>
     <dimen name="skills_color_label_width">3dp</dimen>
-    <dimen name="skills_label_height">20sp</dimen>
+    <dimen name="skills_label_height">26sp</dimen>
     <dimen name="items_margin">8dp</dimen>
 </resources>

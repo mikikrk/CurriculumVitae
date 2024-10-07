@@ -2,11 +2,11 @@ package com.mnowak.curriculumvitae.feature.moreInfo
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.map
 import com.mnowak.curriculumvitae.liveData.type.StringResLiveData
 import com.mnowak.curriculumvitae.R
 import com.mnowak.curriculumvitae.data.model.PersonalInfo
 import com.mnowak.curriculumvitae.liveData.InitializedLiveData
-import com.mnowak.curriculumvitae.liveData.map
 
 private const val EXPERIENCE_PAGE = 0
 private const val STUDIES_PAGE = 1
@@ -36,11 +36,11 @@ class MoreInfoViewModelImpl(
 
     override val selectedPage = InitializedLiveData(EXPERIENCE_PAGE)
     override val activityTitle = selectedPage.map { page ->
-        page?.let { TITLES_IDS[it] }
+        page.let { TITLES_IDS[it] }
     }
-    override val name: LiveData<String> = personalInfo.map { it?.name }
-    override val position: LiveData<String> = personalInfo.map { it?.position }
-    override val photoUri: LiveData<String> = personalInfo.map { it?.photoUri }
+    override val name: LiveData<String> = personalInfo.map { it.name }
+    override val position: LiveData<String> = personalInfo.map { it.position }
+    override val photoUri: LiveData<String> = personalInfo.map { it.photoUri }
 
     override fun onPageChanged(page: Int) {
         selectedPage.postValue(page)

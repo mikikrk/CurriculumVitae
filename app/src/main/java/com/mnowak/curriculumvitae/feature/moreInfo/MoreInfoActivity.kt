@@ -13,13 +13,13 @@ import com.mnowak.curriculumvitae.feature.moreInfo.fragment.skills.SkillsFragmen
 import com.mnowak.curriculumvitae.feature.moreInfo.fragment.studiesActivities.StudiesActivitiesFragment
 import com.mnowak.curriculumvitae.utils.onPageChanged
 import dagger.android.support.DaggerAppCompatActivity
-import kotlinx.android.synthetic.main.activity_more_info.*
 import javax.inject.Inject
 
 class MoreInfoActivity : DaggerAppCompatActivity() {
 
     @Inject
     lateinit var factory: ViewModelFactory
+    lateinit var binding: ActivityMoreInfoBinding
 
     private val viewModel: MoreInfoViewModel by lazy {
         ViewModelProviders.of(this, factory).get(MoreInfoViewModel::class.java)
@@ -38,7 +38,7 @@ class MoreInfoActivity : DaggerAppCompatActivity() {
     }
 
     private fun bindView() {
-        val binding = DataBindingUtil.setContentView<ActivityMoreInfoBinding>(this, R.layout.activity_more_info)
+        binding = DataBindingUtil.setContentView<ActivityMoreInfoBinding>(this, R.layout.activity_more_info)
         binding.setLifecycleOwner(this)
         binding.viewModel = viewModel
     }
@@ -49,13 +49,13 @@ class MoreInfoActivity : DaggerAppCompatActivity() {
 
     private fun prepareViewPager() {
         val screenPagerAdapter = MoreInfoPagerAdapter(supportFragmentManager, screens)
-        vpContent.adapter = screenPagerAdapter
-        vpContent.onPageChanged(viewModel::onPageChanged)
+        binding.vpContent.adapter = screenPagerAdapter
+        binding.vpContent.onPageChanged(viewModel::onPageChanged)
     }
 
     private fun observeTitle() {
         viewModel.activityTitle.observe(this, Observer {
-            supportActionBar?.setTitle(it)
+                supportActionBar?.setTitle(it)
         })
     }
 

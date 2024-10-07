@@ -9,8 +9,6 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.mnowak.curriculumvitae.databinding.ItemExperienceCompanyBinding
 import com.mnowak.curriculumvitae.utils.getExperiencePointerMarginTop
-import kotlinx.android.extensions.LayoutContainer
-import kotlinx.android.synthetic.main.item_experience_company.*
 
 class ExperienceAdapter(
 
@@ -34,15 +32,12 @@ class ExperienceAdapter(
 
             private val itemBinding: ItemExperienceCompanyBinding
 
-    ) : RecyclerView.ViewHolder(itemBinding.root),
-            LayoutContainer {
-
-        override val containerView = itemBinding.root
+    ) : RecyclerView.ViewHolder(itemBinding.root) {
 
         init {
-            vCompanyToMarkerTrianglePointer.layoutParams.apply {
+            itemBinding.vCompanyToMarkerTrianglePointer.layoutParams.apply {
                 if (this is ViewGroup.MarginLayoutParams) {
-                    updateMargins(top = getExperiencePointerMarginTop(containerView.resources))
+                    updateMargins(top = getExperiencePointerMarginTop(itemBinding.root.resources))
                 }
             }
         }

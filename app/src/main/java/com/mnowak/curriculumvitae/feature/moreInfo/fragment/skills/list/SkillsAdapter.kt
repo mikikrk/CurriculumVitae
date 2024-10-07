@@ -15,8 +15,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.mnowak.curriculumvitae.R
 import com.mnowak.curriculumvitae.databinding.ItemSkillsBinding
 import com.mnowak.curriculumvitae.widgets.SkillTextView
-import kotlinx.android.extensions.LayoutContainer
-import kotlinx.android.synthetic.main.item_skills.*
 import java.util.*
 
 class SkillsAdapter(
@@ -47,10 +45,7 @@ class SkillsAdapter(
             private val itemBinding: ItemSkillsBinding,
             private val lifecycleOwner: LifecycleOwner
 
-    ) : RecyclerView.ViewHolder(itemBinding.root),
-            LayoutContainer {
-
-        override val containerView: View = itemView
+    ) : RecyclerView.ViewHolder(itemBinding.root) {
 
         private val context: Context = itemView.context
 
@@ -67,16 +62,16 @@ class SkillsAdapter(
         private val onGlobalLayoutListener = object : ViewTreeObserver.OnGlobalLayoutListener {
 
             override fun onGlobalLayout() {
-                if (llSkills.width > 0) {
-                    llSkills.viewTreeObserver.removeOnGlobalLayoutListener(this)
-                    maxWidth = llSkills.width - 2 * boxPadding
+                if (itemBinding.llSkills.width > 0) {
+                    itemBinding.llSkills.viewTreeObserver.removeOnGlobalLayoutListener(this)
+                    maxWidth = itemBinding.llSkills.width - 2 * boxPadding
                     viewModel?.let { bind(it) }
                 }
             }
         }
 
         init {
-            llSkills.viewTreeObserver.addOnGlobalLayoutListener(onGlobalLayoutListener)
+            itemBinding.llSkills.viewTreeObserver.addOnGlobalLayoutListener(onGlobalLayoutListener)
         }
 
         fun bind(viewModel: SkillsSetItemViewModel) {
@@ -89,7 +84,7 @@ class SkillsAdapter(
         }
 
         private val skillsObserver = Observer<List<SkillsSetItemViewModel.SkillItemViewModel>> { skillItems ->
-            llSkills.removeAllViews()
+            itemBinding.llSkills.removeAllViews()
             val skillViews = mutableListOf<SkillTextView>()
             skillItems.forEach { skillItem ->
                 val skillTextView = prepareSkillTextView(skillItem)
@@ -169,7 +164,7 @@ class SkillsAdapter(
             for (skillTextView in oneLineViews) {
                 lineLinearLayout.addView(skillTextView)
             }
-            llSkills.addView(lineLinearLayout)
+            itemBinding.llSkills.addView(lineLinearLayout)
         }
 
         private fun prepareNewLineLinearLayout(lastLine: Boolean): LinearLayout {
@@ -184,7 +179,7 @@ class SkillsAdapter(
         }
 
         fun clear() {
-            llSkills.removeAllViews()
+            itemBinding.llSkills.removeAllViews()
             viewModel?.skills?.removeObserver(skillsObserver)
             viewModel = null
         }

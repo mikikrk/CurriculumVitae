@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="com.mnowak.curriculumvitae">
+    xmlns:tools="http://schemas.android.com/tools">
 
     <application
         android:name="com.mnowak.curriculumvitae.CurriculumVitaeApplication"
@@ -14,6 +13,7 @@
         tools:ignore="GoogleAppIndexingWarning">
         <activity
             android:name="com.mnowak.curriculumvitae.feature.personal.PersonalInfoActivity"
+            android:exported="true"
             android:label="@string/android_developers"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -23,6 +23,7 @@
         </activity>
         <activity
             android:name="com.mnowak.curriculumvitae.feature.moreInfo.MoreInfoActivity"
+            android:exported="true"
             android:screenOrientation="portrait" />
     </application>
 </manifest>

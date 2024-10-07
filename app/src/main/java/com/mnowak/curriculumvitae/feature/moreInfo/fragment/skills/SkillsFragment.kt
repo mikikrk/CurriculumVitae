@@ -12,13 +12,13 @@ import com.mnowak.curriculumvitae.R
 import com.mnowak.curriculumvitae.di.viewModel.ViewModelFactory
 import com.mnowak.curriculumvitae.feature.moreInfo.fragment.skills.list.SkillsAdapter
 import dagger.android.support.DaggerFragment
-import kotlinx.android.synthetic.main.fragment_recycler_view.*
 import javax.inject.Inject
 
 class SkillsFragment : DaggerFragment() {
 
     @Inject
     lateinit var viewModelFactory: ViewModelFactory
+    lateinit var recyclerView: RecyclerView
 
     private val adapter = SkillsAdapter(this)
 
@@ -26,8 +26,13 @@ class SkillsFragment : DaggerFragment() {
         ViewModelProviders.of(this, viewModelFactory).get(SkillsViewModel::class.java)
     }
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.fragment_recycler_view, container, false)
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
+        recyclerView = inflater.inflate(R.layout.fragment_recycler_view, container, false) as RecyclerView
+        return recyclerView
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -42,7 +47,7 @@ class SkillsFragment : DaggerFragment() {
     }
 
     private fun observe() {
-        viewModel.skills.observe(this, Observer {
+        viewModel.skills.observe(viewLifecycleOwner, Observer {
             adapter.submitList(it)
         })
     }

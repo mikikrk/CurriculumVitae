@@ -1,19 +1,8 @@
 package com.mnowak.curriculumvitae.liveData
 
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.Transformations
 import com.mnowak.curriculumvitae.liveData.mediator.combined.CombinedMediatorLiveData
 import com.mnowak.curriculumvitae.liveData.mediator.combined.TrippleCombinedMediatorLiveData
-
-fun <T, R> LiveData<T>.map(transformation: (T?) -> R?): LiveData<R> =
-        Transformations.map(this, transformation)
-
-fun <T, R> LiveData<T>.onChange(transformation: (T?) -> R?): LiveData<R> =
-        Transformations.map(this, transformation)
-
-fun <T, R> LiveData<T>.switchMap(transformation: (T?) -> LiveData<R>): LiveData<R> =
-        Transformations.switchMap(this, transformation)
-
 fun <FirstSourceType, SecondSourceType, ThirdSourceType, ReturnType> combine(
         firstSourceData: LiveData<FirstSourceType>? = null,
         secondSourceData: LiveData<SecondSourceType>? = null,
