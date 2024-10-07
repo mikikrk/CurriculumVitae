@@ -12,21 +12,27 @@ import com.mnowak.curriculumvitae.R
 import com.mnowak.curriculumvitae.di.viewModel.ViewModelFactory
 import com.mnowak.curriculumvitae.feature.moreInfo.fragment.studiesActivities.list.StudiesActivitiesAdapter
 import dagger.android.support.DaggerFragment
-import kotlinx.android.synthetic.main.fragment_recycler_view.*
 import javax.inject.Inject
 
 class StudiesActivitiesFragment : DaggerFragment() {
 
     @Inject
     lateinit var viewModelFactory: ViewModelFactory
+    lateinit var recyclerView: RecyclerView
 
     private val viewModel: StudiesActivitiesViewModel by lazy {
         ViewModelProviders.of(this, viewModelFactory).get(StudiesActivitiesViewModel::class.java)
     }
     private val adapter = StudiesActivitiesAdapter(this)
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.fragment_recycler_view, container, false)
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
+        recyclerView =
+            inflater.inflate(R.layout.fragment_recycler_view, container, false) as RecyclerView
+        return recyclerView
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -37,7 +43,7 @@ class StudiesActivitiesFragment : DaggerFragment() {
     }
 
     private fun observe() {
-        viewModel.studiesActivities.observe(this, Observer {
+        viewModel.studiesActivities.observe(viewLifecycleOwner, Observer {
             adapter.submitList(it)
         })
     }

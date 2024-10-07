@@ -14,8 +14,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.mnowak.curriculumvitae.R
 import com.mnowak.curriculumvitae.databinding.ItemStudiesActivityBinding
 import com.mnowak.curriculumvitae.databinding.ViewCheckedEventBinding
-import kotlinx.android.extensions.LayoutContainer
-import kotlinx.android.synthetic.main.item_studies_activity.*
 
 class StudiesActivitiesAdapter(
 
@@ -45,15 +43,12 @@ class StudiesActivitiesAdapter(
             private val itemBinding: ItemStudiesActivityBinding,
             private val lifecycleOwner: LifecycleOwner
 
-    ) : RecyclerView.ViewHolder(itemBinding.root),
-            LayoutContainer {
-
-        override val containerView: View = itemBinding.root
+    ) : RecyclerView.ViewHolder(itemBinding.root) {
 
         private val layoutInflater: LayoutInflater = LayoutInflater.from(itemView.context)
 
         private val context by lazy {
-            containerView.context
+            itemBinding.root.context
         }
         private val primaryColor: Int by lazy {
             ContextCompat.getColor(context, R.color.colorTextPrimary)
@@ -80,9 +75,9 @@ class StudiesActivitiesAdapter(
             viewModel.redundantEvents.observe(lifecycleOwner, redundantEventsObserver)
         }
 
-        private val importantEventsObserver = prepareEventsObserver(llImportantEvents)
+        private val importantEventsObserver = prepareEventsObserver(itemBinding.llImportantEvents)
 
-        private val redundantEventsObserver = prepareEventsObserver(llRedundantEvents)
+        private val redundantEventsObserver = prepareEventsObserver(itemBinding.llRedundantEvents)
 
         private fun prepareEventsObserver(linearLayout: LinearLayout): Observer<List<StudiesActivitiesItemViewModel.EventViewModel>> =
                 Observer { eventsValue ->
@@ -102,8 +97,8 @@ class StudiesActivitiesAdapter(
             viewModel?.importantEvents?.removeObserver(importantEventsObserver)
             viewModel?.redundantEvents?.removeObserver(redundantEventsObserver)
             viewModel = null
-            llImportantEvents.removeAllViews()
-            llRedundantEvents.removeAllViews()
+            itemBinding.llImportantEvents.removeAllViews()
+            itemBinding.llRedundantEvents.removeAllViews()
         }
     }
 }

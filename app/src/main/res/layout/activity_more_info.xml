@@ -36,7 +36,7 @@
                 android:layout_toEndOf="@id/civPhoto"
                 android:text="@{viewModel.name}"
                 android:textColor="@color/colorTextPrimary"
-                android:textSize="@dimen/header_text_size" />
+                android:textSize="@dimen/more_info_name_text_size" />
 
             <TextView
                 android:id="@+id/tvPosition"
@@ -46,7 +46,7 @@
                 android:layout_toEndOf="@id/civPhoto"
                 android:text="@{viewModel.position}"
                 android:textColor="@color/colorTextPrimary"
-                android:textSize="@dimen/subheader_text_size" />
+                android:textSize="@dimen/more_info_position_text_size" />
         </RelativeLayout>
 
         <androidx.viewpager.widget.ViewPager

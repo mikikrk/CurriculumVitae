@@ -18,7 +18,8 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:orientation="vertical"
-            android:padding="@dimen/personal_data_padding">
+            android:paddingTop="@dimen/personal_data_padding"
+            android:paddingHorizontal="@dimen/personal_data_padding">
 
             <TextView
                 android:id="@+id/tvName"

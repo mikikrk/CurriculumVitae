@@ -9,59 +9,75 @@
   "experience": [
     {
       "id": 0,
-      "name": "WorldRemit",
-      "employmentTime": "07.2019 - Present",
+      "name": "SpotOn",
+      "employmentTime": "01.2021 - Present",
       "position": "Senior Android Developer",
-      "description": "Maintaining and extending calculation and transaction features of the Android application. Taking part in designing cross platform architectures. Building one of backend services. Temporally taking a role of a Team Leader.",
-      "iconUri": "file:///android_asset/ic_android_kotlin.png"
+      "description": "Designing and developing main features of Handheld POS system. Seeking for performance boost for apps that need to work in fast pace restaurant environment on low end devices.",
+      "iconUri": "file:///android_asset/ic_android_kotlin.png",
+      "display": true
     },
     {
       "id": 1,
+      "name": "WorldRemit",
+      "employmentTime": "07.2019 - 12.2020",
+      "position": "Senior Android Developer",
+      "description": "Maintaining and extending calculation and transaction features of the Android application. Taking part in designing cross platform architectures. Building one of backend services. Temporally taking a role of a Team Leader.",
+      "iconUri": "file:///android_asset/ic_android_kotlin.png",
+      "display": true
+    },
+    {
+      "id": 2,
       "name": "Treeline",
       "employmentTime": "02.2019 - 06.2019",
       "position": "Android Developer",
       "description": "Adjusting big entertainment park app for the new location.",
-      "iconUri": "file:///android_asset/ic_android_kotlin.png"
+      "iconUri": "file:///android_asset/ic_android_kotlin.png",
+      "display": true
     },
     {
-      "id": 2,
+      "id": 3,
       "name": "BonfireIT/SportsBroker",
       "employmentTime": "06.2017 - 01.2019",
       "position": "Lead Android Developer",
       "description": "Leading development of SportsBroker application - sport trading app, where results influence into prices.",
-      "iconUri": "file:///android_asset/ic_android_kotlin.png"
-    },
-    {
-      "id": 3,
-      "name": "ColorTv",
-      "employmentTime": "01.2016 - 06.2017",
-      "position": "Android Developer",
-      "description": "Developing content recommendation and adveriting sdk for AndroidTv, FireTv, Android and Chromecast platforms.",
-      "iconUri": "file:///android_asset/ic_android.png"
+      "iconUri": "file:///android_asset/ic_android_kotlin.png",
+      "display": true
     },
     {
       "id": 4,
+      "name": "ColorTv",
+      "employmentTime": "01.2016 - 06.2017",
+      "position": "Android Developer",
+      "description": "Developing content recommendation and advertising sdk for AndroidTv, FireTv, Android and Chromecast platforms.",
+      "iconUri": "file:///android_asset/ic_android.png",
+      "display": true
+    },
+    {
+      "id": 5,
       "name": "Comarch",
       "employmentTime": "07.2014 - 06.2015",
       "position": "Junior Java Developer",
       "description": "Developing B2B system with usage of Spring, Blueprint JDBC, SOAP, Camel and Oracle databases.",
-      "iconUri": "file:///android_asset/ic_java.png"
+      "iconUri": "file:///android_asset/ic_java.png",
+      "display": true
     },
     {
-      "id": 5,
+      "id": 6,
       "name": "City tour company",
       "employmentTime": "holidays 2011 - 2013",
       "position": "Guide as a Melex driver",
       "description": "Selling guided city tours to tourists and showing Krakow around in electric cart.",
-      "iconUri": "file:///android_asset/ic_melex.png"
+      "iconUri": "file:///android_asset/ic_melex.png",
+      "display": false
     },
     {
-      "id": 6,
+      "id": 7,
       "name": "Strzelnica Kraków",
       "employmentTime": "2014 - 2017",
       "position": "Shooting instructor",
       "description": "Occasionally providing shooting training for big and english speaking groups",
-      "iconUri": "file:///android_asset/ic_shooting.png"
+      "iconUri": "file:///android_asset/ic_shooting.png",
+      "display": false
     }
   ],
   "activities": [
@@ -191,27 +207,33 @@
         "Android",
         "Kotlin",
         "Java",
-        "Clean code",
         "Clean architecture",
+        "Clean code",
         "Design Patterns",
         "SOLID",
         "Code Reviews",
+        "Coroutines",
+        "RxJava2",
         "Git",
-        "Dagger2",
+        "Koin",
         "Junit5",
         "Mockito",
-        "Firebase Realtime Database"
+        "Mockk",
+        "Kotest"
       ],
       "mediumLevelSkills": [
-        "RxJava2",
-        "Android Architecture Components",
+        "Compose",
+        "Canvas",
         "Gradle",
+        "Dagger2",
         "Retrofit",
-        "REST"
+        "REST",
+        "WebSocket"
       ],
       "lowLevelSkills": [
         "Spring WebFlux",
-        "JavaScript"
+        "JavaScript",
+        "GoLang"
       ]
     },
     {
@@ -221,15 +243,14 @@
       "goodLevelSkills": [
         "Communication",
         "Product analysis",
-        "Product building"
+        "Product building",
+        "Presentation",
+        "Feedback"
       ],
       "mediumLevelSkills": [
         "Team management",
         "Project management",
-        "Feedback",
-        "Presentation",
-        "Time management",
-        "Team working"
+        "Time management"
       ]
     },
     {
@@ -239,12 +260,11 @@
       "mediumLevelSkills": [
         "Traveling",
         "Sailing",
-        "Meeting people",
+        "Caravaning",
         "Board games",
-        "Technologies",
-        "Shooting",
-        "Sport",
-        "Talks",
+        "Hiking",
+        "Biking",
+        "Tennis",
         "Muggle quidditch [sic!]"
       ]
     }

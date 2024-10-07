@@ -2,9 +2,9 @@ package com.mnowak.curriculumvitae.feature.moreInfo.fragment.skills
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.map
 import com.mnowak.curriculumvitae.feature.moreInfo.fragment.skills.list.SkillsSetItemViewModel
 import com.mnowak.curriculumvitae.feature.moreInfo.fragment.skills.list.SkillsSetItemViewModelImpl
-import com.mnowak.curriculumvitae.liveData.map
 
 abstract class SkillsViewModel : ViewModel() {
 
@@ -19,7 +19,7 @@ class SkillsViewModelImpl(
 
     override val skills: LiveData<List<SkillsSetItemViewModel>> by lazy {
         repository.skills.map { skillsSet ->
-            skillsSet?.map {
+            skillsSet.map {
                 SkillsSetItemViewModelImpl(it) as SkillsSetItemViewModel
             }
         }

@@ -1,35 +1,25 @@
-import org.jetbrains.kotlin.config.KotlinCompilerVersion
-import org.jetbrains.kotlin.gradle.internal.AndroidExtensionsExtension
-
 plugins {
     id("com.android.application")
     kotlin("android")
     kotlin("kapt")
-    id("kotlin-android-extensions")
 }
 
 android {
-    compileSdkVersion(28)
-    buildToolsVersion = "28.0.3"
+    compileSdk = 34
+    buildToolsVersion = "34.0.0"
 
     defaultConfig {
         applicationId = "com.mnowak.curriculumvitae"
-        minSdkVersion(21)
-        targetSdkVersion(28)
+        minSdk = 21
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
         testInstrumentationRunner = "android.support.test.runner.AndroidJUnitRunner"
     }
 
-    androidExtensions {
-        configure(delegateClosureOf<AndroidExtensionsExtension> {
-            isExperimental = true
-        })
-    }
-
     compileOptions {
-        setSourceCompatibility(JavaVersion.VERSION_1_8)
-        setTargetCompatibility(JavaVersion.VERSION_1_8)
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
 
     buildTypes {
@@ -41,25 +31,23 @@ android {
             isMinifyEnabled = false
         }
     }
-    dataBinding {
-        isEnabled = true
+
+    buildFeatures {
+        dataBinding = true
+        viewBinding = true
     }
+    namespace = "com.mnowak.curriculumvitae"
 }
 
 dependencies {
 
-    testImplementation("junit:junit:4.12")
-    androidTestImplementation("com.android.support.test.espresso:espresso-core:3.0.2")
+    testImplementation("junit:junit:4.13.2")
 
-    implementation("androidx.appcompat:appcompat:1.0.2")
+    implementation("androidx.appcompat:appcompat:1.7.0")
     implementation("androidx.legacy:legacy-support-v4:1.0.0")
-    implementation("androidx.lifecycle:lifecycle-extensions:2.0.0")
-    implementation("androidx.core:core-ktx:1.0.1")
-    implementation("com.google.android.material:material:1.0.0")
-    kapt("androidx.databinding:databinding-compiler:3.2.1")
-
-    //Kotlin
-    implementation(kotlin("stdlib-jdk8", KotlinCompilerVersion.VERSION))
+    implementation("androidx.lifecycle:lifecycle-extensions:2.2.0")
+    implementation("androidx.core:core-ktx:1.13.1")
+    implementation("com.google.android.material:material:1.12.0")
 
     //Dagger
     implementation("com.google.dagger:dagger-android:2.16")
@@ -68,11 +56,11 @@ dependencies {
     kapt("com.google.dagger:dagger-compiler:2.16")
 
     //ButterKnife
-    implementation("com.jakewharton:butterknife:9.0.0-rc3")
-    kapt("com.jakewharton:butterknife-compiler:9.0.0-rc3")
+    implementation("com.jakewharton:butterknife:10.2.3")
+    kapt("com.jakewharton:butterknife-compiler:10.2.3")
 
     //GSON
-    implementation("com.google.code.gson:gson:2.8.2")
+    implementation("com.google.code.gson:gson:2.10")
 
     //Bindable Circle Image View
     implementation("de.hdodenhof:circleimageview:2.1.0")

@@ -11,6 +11,8 @@ import androidx.annotation.ColorInt
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.map
+import androidx.lifecycle.switchMap
 import com.mnowak.curriculumvitae.data.model.StudiesActivity
 import com.mnowak.curriculumvitae.liveData.*
 
@@ -101,12 +103,12 @@ class StudiesActivitiesItemViewModelImpl(
     ) : EventViewModel() {
 
         private val reducedText by lazy {
-            spannableColors.onChange {
+            spannableColors.map {
                 prepareSpannableText(expanded = false)
             }
         }
         private val expandedText by lazy {
-            spannableColors.onChange {
+            spannableColors.map {
                 prepareSpannableText(expanded = true)
             }
         }
